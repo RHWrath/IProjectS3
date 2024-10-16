@@ -43,5 +43,5 @@ jobs:
           uses: docker/build-push-action@v6.9.0
           with:
               push: true
-              tags: ${{ secrets.DOCKER_USERNAME }}/fontys-IPS3-Catcafe-backend:latest
+              tags: ${{ secrets.DOCKER_USERNAME }}/fontys-ips3-catcafe-backend:latest
               context: ./Backend-Example
