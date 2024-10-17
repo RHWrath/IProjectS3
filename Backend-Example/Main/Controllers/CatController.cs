@@ -4,7 +4,7 @@ using Backend_Example.ViewModels;
 
 namespace Backend_Example.Service
 {
-    public static class CatService
+    public static class CatController
     {
         public static void SetupCat(this WebApplication app)
         {

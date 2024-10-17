@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using DataModels;
+using DAL_Kattencafe.DataModels;
 
-namespace Backend_Example
+namespace DAL_Kattencafe.DBContext
 {
     public class DatabaseContext : DbContext
     {

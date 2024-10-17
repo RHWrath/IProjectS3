@@ -4,7 +4,7 @@ using Backend_Example.ViewModels;
 
 namespace Backend_Example.Service
 {
-    public static class MenuCardService
+    public static class MenuCardController
     {
         public static void SetupMenuCard(this WebApplication app)
         {

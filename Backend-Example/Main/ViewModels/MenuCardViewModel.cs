@@ -1,4 +1,4 @@
-﻿namespace Backend_Example.ViewModels
+﻿namespace Presentation_Kattencafe.ViewModels
 {
     public class MenuCardViewModel
     {

@@ -1,4 +1,4 @@
-﻿namespace DataModels
+﻿namespace DAL_Kattencafe.DataModels
 {
     public class MenuCardDataModel
     {
