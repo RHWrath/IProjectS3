@@ -4,12 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Main", "Main\Main.csproj", "{6AAD22D9-E3C4-4047-9A29-D848F0D8DB15}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4371DE0D-560C-4BB0-B34D-4743367B9BE4} = {4371DE0D-560C-4BB0-B34D-4743367B9BE4}
+		{4F633A3B-99E3-43AA-A207-04551AFCEA51} = {4F633A3B-99E3-43AA-A207-04551AFCEA51}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend-Test", "Backend-Test\Backend-Test.csproj", "{FD3AE34D-8A7A-4084-A58E-5F4F380EC56F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL-Kattencafe", "DAL-Kattencafe\DAL-Kattencafe.csproj", "{4371DE0D-560C-4BB0-B34D-4743367B9BE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation-Kattencafe", "Presentation-Kattencafe\Presentation-Kattencafe.csproj", "{4F633A3B-99E3-43AA-A207-04551AFCEA51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic-Kattencafe", "Presentation-Kattencafe\Logic-Kattencafe.csproj", "{4F633A3B-99E3-43AA-A207-04551AFCEA51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

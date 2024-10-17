@@ -1,4 +1,4 @@
-﻿namespace Backend_Example
+﻿namespace Main
 {
     public static class Weather
     {

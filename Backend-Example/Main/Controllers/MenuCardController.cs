@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using DataModels;
-using Backend_Example.ViewModels;
+using Main.ViewModels;
+using DAL_Kattencafe.DBContext;
+using DAL_Kattencafe.DataModels;
 
-namespace Backend_Example.Service
+namespace Main.Controllers
 {
     public static class MenuCardController
     {
