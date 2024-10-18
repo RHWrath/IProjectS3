@@ -1,6 +1,6 @@
-﻿namespace DAL_Kattencafe.DataModels
+﻿namespace Logic_Kattencafe.Models
 {
-    public class MenuCardDataModel
+    public class MenuCardModel
     {
         public int ID { get; set; }
         public string Name { get; set; }

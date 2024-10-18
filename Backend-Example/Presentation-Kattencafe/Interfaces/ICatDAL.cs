@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Logic_Kattencafe.Models;
 
-namespace Main.Interfaces
+namespace Logic_Kattencafe.Interfaces
 {
-    internal class ICatDAL
+    public interface ICatDAL
     {
+        public List<CatModel> GetCatList();
     }
 }

@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Main.ViewModels;
-using DAL_Kattencafe.DBContext;
-using DAL_Kattencafe.DataModels;
+using DAL_Kattencafe;
+using Logic_Kattencafe.Models;
+using Logic_Kattencafe.Interfaces;
+using Presentation_Kattencafe.Services;
 
 namespace Main.Controllers
 {
@@ -11,23 +13,10 @@ namespace Main.Controllers
         {
             app.MapGet("/Cat", (DatabaseContext db) =>
             {
-                DbSet<CatDataModel> cats = db.CatLists;
+                ICatDAL catDAL = new CatDAL(db);
+                CatService catService = new CatService(catDAL);
 
-                List<CatViewModel> catViewModels = new();
-
-                foreach (CatDataModel cat in cats)
-                {
-                    CatViewModel catViewModel = new();
-
-                    catViewModel.ID = cat.ID;
-                    catViewModel.Name = cat.Name;
-                    catViewModel.Description = cat.Description;
-                    catViewModel.IMG = cat.IMG;
-
-                    catViewModels.Add(catViewModel);
-                }
-
-                return catViewModels;
+                
             })
             .WithName("GetCats")
             .WithOpenApi()

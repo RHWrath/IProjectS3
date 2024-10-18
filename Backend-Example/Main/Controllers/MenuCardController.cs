@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Main.ViewModels;
-using DAL_Kattencafe.DBContext;
-using DAL_Kattencafe.DataModels;
+using DAL_Kattencafe;
+using Logic_Kattencafe.Models;
 
 namespace Main.Controllers
 {
@@ -11,11 +11,11 @@ namespace Main.Controllers
         {
             app.MapGet("/MenuCard", (DatabaseContext db) =>
             {
-                DbSet<MenuCardDataModel> Menus = db.MenuCards;
+                DbSet<MenuCardModel> Menus = db.MenuCards;
 
                 List<MenuCardViewModel> menuCardViewModels = new();
 
-                foreach (MenuCardDataModel menu in Menus)
+                foreach (MenuCardModel menu in Menus)
                 {
                     MenuCardViewModel menuCardViewModel = new();
 

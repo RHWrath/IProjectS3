@@ -1,6 +1,6 @@
-﻿namespace DAL_Kattencafe.DataModels
+﻿namespace Logic_Kattencafe.Models
 {
-    public class CatDataModel
+    public class CatModel
     {
         public int ID { get; set; }
         public string Name { get; set; }
