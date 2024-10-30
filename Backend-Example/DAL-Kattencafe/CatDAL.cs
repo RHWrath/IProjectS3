@@ -2,29 +2,33 @@
 using Logic.Models;
 using Logic.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
     public class CatDAL : ICatDAL
     {
-        private DbSet<CatModel> Catset {  get; set; }
+        private DatabaseContext _dbContext;
 
         public CatDAL(DatabaseContext DBC)
         {
-            Catset = DBC.CatLists;       
+            _dbContext = DBC;     
         }
 
         public List<CatModel> GetCatList() 
         { 
-            
-            
-            throw new NotImplementedException(); 
-        
+            List<CatModel> CatList = new();
+
+            foreach (CatModel CatModels in _dbContext.CatLists) 
+            { 
+                CatModel CatModel = new CatModel();
+                CatModel.ID = CatModels.ID;
+                CatModel.Name = CatModels.Name;
+                CatModel.Description = CatModels.Description;
+                CatModel.IMG = CatModels.IMG;
+
+                CatList.Add(CatModel);
+            }
+            return CatList;      
         
         }
 

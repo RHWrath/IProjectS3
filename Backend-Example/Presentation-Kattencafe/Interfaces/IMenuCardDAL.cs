@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logic.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace Logic.Interfaces
 {
-    internal class IMenuCardDAL
+    public interface IMenuCardDAL
     {
+        public List<MenuCardModel> GetMenuCards();
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Main.ViewModels;
-using DAL_Kattencafe;
+using DAL;
 using Logic.Models;
 
 namespace Main.Controllers

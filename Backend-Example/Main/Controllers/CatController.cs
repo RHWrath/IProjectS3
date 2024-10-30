@@ -3,7 +3,7 @@ using Main.ViewModels;
 using DAL;
 using Logic.Models;
 using Logic.Interfaces;
-using Logic.Services;
+using Logic;
 
 namespace Main.Controllers
 {
@@ -14,8 +14,21 @@ namespace Main.Controllers
             app.MapGet("/Cat", (DatabaseContext db) =>
             {
                 ICatDAL catDAL = new CatDAL(db);
-                CatService catService = new CatService(catDAL);
+                CatLogic catlogic = new CatLogic(catDAL);
+                List<CatViewModel> Catlist = new ();
 
+                foreach (CatModel catModel in catlogic.GetCats())
+                {
+                    CatViewModel catViewModel = new();
+
+                    catViewModel.ID = catModel.ID;
+                    catViewModel.Name = catModel.Name;
+                    catViewModel.Description = catModel.Description;
+                    catViewModel.IMG = catModel.IMG;
+
+                    Catlist.Add(catViewModel);
+                }
+                return Catlist;
                 
             })
             .WithName("GetCats")
