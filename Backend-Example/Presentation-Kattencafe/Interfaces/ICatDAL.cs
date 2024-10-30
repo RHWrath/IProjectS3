@@ -1,6 +1,6 @@
-﻿using Logic_Kattencafe.Models;
+﻿using Logic.Models;
 
-namespace Logic_Kattencafe.Interfaces
+namespace Logic.Interfaces
 {
     public interface ICatDAL
     {

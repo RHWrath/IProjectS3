@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Logic_Kattencafe.Models;
+using Logic.Models;
 
-namespace DAL_Kattencafe
+namespace DAL
 {
     public class DatabaseContext : DbContext
     {

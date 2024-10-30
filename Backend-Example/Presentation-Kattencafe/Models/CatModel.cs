@@ -1,4 +1,4 @@
-﻿namespace Logic_Kattencafe.Models
+﻿namespace Logic.Models
 {
     public class CatModel
     {

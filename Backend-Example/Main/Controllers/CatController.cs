@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Main.ViewModels;
-using DAL_Kattencafe;
-using Logic_Kattencafe.Models;
-using Logic_Kattencafe.Interfaces;
-using Presentation_Kattencafe.Services;
+using DAL;
+using Logic.Models;
+using Logic.Interfaces;
+using Logic.Services;
 
 namespace Main.Controllers
 {

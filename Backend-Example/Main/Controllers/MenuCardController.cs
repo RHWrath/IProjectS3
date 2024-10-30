@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Main.ViewModels;
 using DAL_Kattencafe;
-using Logic_Kattencafe.Models;
+using Logic.Models;
 
 namespace Main.Controllers
 {

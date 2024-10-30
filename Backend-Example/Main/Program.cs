@@ -1,6 +1,6 @@
 using Main;
 using Main.Controllers;
-using DAL_Kattencafe;
+using DAL;
 
 var builder = WebApplication.CreateBuilder(args);
 

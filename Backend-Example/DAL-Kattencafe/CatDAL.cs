@@ -1,6 +1,6 @@
-﻿using DAL_Kattencafe;
-using Logic_Kattencafe.Models;
-using Logic_Kattencafe.Interfaces;
+﻿using DAL;
+using Logic.Models;
+using Logic.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL_Kattencafe
+namespace DAL
 {
     public class CatDAL : ICatDAL
     {
