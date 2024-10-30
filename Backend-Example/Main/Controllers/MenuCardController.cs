@@ -2,6 +2,8 @@
 using Main.ViewModels;
 using DAL;
 using Logic.Models;
+using Logic.Interfaces;
+using Logic;
 
 namespace Main.Controllers
 {
@@ -11,23 +13,22 @@ namespace Main.Controllers
         {
             app.MapGet("/MenuCard", (DatabaseContext db) =>
             {
-                DbSet<MenuCardModel> Menus = db.MenuCards;
+                IMenuCardDAL MenuDAL = new MenuDAL(db);
+                MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
+                List<MenuCardViewModel> MenuCardList = new();
 
-                List<MenuCardViewModel> menuCardViewModels = new();
-
-                foreach (MenuCardModel menu in Menus)
+                foreach (MenuCardModel menuModel in menuCardLogic.GetMenuCards())
                 {
                     MenuCardViewModel menuCardViewModel = new();
 
-                    menuCardViewModel.ID = menu.ID;
-                    menuCardViewModel.Name = menu.Name;
-                    menuCardViewModel.Description = menu.Description;
-                    menuCardViewModel.Price = menu.Price;
+                    menuCardViewModel.ID = menuModel.ID;
+                    menuCardViewModel.Name = menuModel.Name;
+                    menuCardViewModel.Description = menuModel.Description;
+                    menuCardViewModel.Price = menuModel.Price;
 
-                    menuCardViewModels.Add(menuCardViewModel);
+                    MenuCardList.Add(menuCardViewModel);
                 }
-
-                return menuCardViewModels;
+                return MenuCardList;
             })
             .WithName("GetMenuCard")
             .WithOpenApi()

@@ -8,7 +8,7 @@ using Logic.Models;
 
 namespace Backend_Test
 {
-    public class MockDAL : ICatDAL
+    public class MockCatDAL : ICatDAL
     {
         public int ID = 1;
         public string Name = "spinx";

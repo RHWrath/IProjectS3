@@ -5,18 +5,28 @@ namespace DAL
 {
     public class MenuDAL : IMenuCardDAL
     {
-        private DbSet<MenuCardModel> MenuSet { get; set; }
+        private DatabaseContext _dbContext;
 
         public MenuDAL(DatabaseContext DBC)
         {
-            MenuSet = DBC.MenuCards;
+            _dbContext = DBC;
         }
 
         public List<MenuCardModel> GetMenuCards()
         {
+            List<MenuCardModel> MenuCardList = new();
 
+            foreach (MenuCardModel menuCardModels in _dbContext.MenuCards)
+            {
+                MenuCardModel MenuModel = new MenuCardModel();
+                MenuModel.ID = menuCardModels.ID;
+                MenuModel.Name = menuCardModels.Name;
+                MenuModel.Description = menuCardModels.Description;
+                MenuModel.Price = menuCardModels.Price;
 
-            throw new NotImplementedException();
+                MenuCardList.Add(MenuModel);
+            }
+            return MenuCardList;
 
 
         }
