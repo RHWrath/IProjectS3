@@ -6,7 +6,7 @@ namespace Backend_Test
     public class CatUnitTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void GetCat()
         {
             //arrange
             MockCatDAL mockDAL = new MockCatDAL();
