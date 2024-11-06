@@ -6,6 +6,8 @@ import './index.css';
 import App from './App';
 import Homepage from '../Pages/HomePage';
 import Menupage from '../Pages/MenuPage';
+import CatListPage from '../Pages/CatListPage';
+import AboutUsPage from '../Pages/AboutUsPage';
 
 
 const root = document.getElementById('root');
@@ -24,6 +26,9 @@ render(
           <Route path="/" component={Homepage} />
           <Route path="/Homepage" component={Homepage} />
           <Route path="/MenuPage" component={Menupage} />
+          <Route path="/CatListPage" component={CatListPage} />
+          <Route path="/AboutUsPage" component={AboutUsPage} />
+
       </Router>
       
   ),
