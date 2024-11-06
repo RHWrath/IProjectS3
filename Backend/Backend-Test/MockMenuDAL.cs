@@ -14,9 +14,11 @@ namespace Backend_Test
         public string Name = "Coffee";
         public string Description = "empty";
         public double Price = 0;
+        public bool IsActive = false;
 
         public List<MenuCardModel> GetMenuCards()
         {
+            IsActive = true;
             return new List<MenuCardModel>() { new MenuCardModel() 
             {
                 ID  = ID,

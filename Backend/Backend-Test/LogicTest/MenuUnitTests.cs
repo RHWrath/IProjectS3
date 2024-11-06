@@ -5,6 +5,7 @@ namespace Backend_Test
     [TestClass]
     public class MenuUnitTest
     {
+        
         [TestMethod]
         public void GetMenuItem()
         {
@@ -20,6 +21,8 @@ namespace Backend_Test
             var MenuCard = TestResult.First();
             Assert.AreEqual("Coffee", MenuCard.Name);
             Assert.AreEqual("empty", MenuCard.Description);
+            Assert.AreEqual(true, mockDAL.IsActive);
+
 
         }
     }

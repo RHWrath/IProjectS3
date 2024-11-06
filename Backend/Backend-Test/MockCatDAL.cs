@@ -14,9 +14,11 @@ namespace Backend_Test
         public string Name = "spinx";
         public string Description = "empty";
         public string IMG = "empty";
+        public bool IsActive = false;
 
         public List<CatModel> GetCatList()
         {
+            IsActive = true;
             return new List<CatModel>() { new CatModel() 
             {
                 ID  = ID,

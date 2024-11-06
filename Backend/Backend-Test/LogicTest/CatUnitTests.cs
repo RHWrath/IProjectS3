@@ -20,6 +20,7 @@ namespace Backend_Test
             var Cat = TestResult.First();
             Assert.AreEqual("spinx", Cat.Name);
             Assert.AreEqual("empty", Cat.Description);
+            Assert.AreEqual(true, mockDAL.IsActive);
 
         }
     }
