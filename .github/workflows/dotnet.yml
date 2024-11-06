@@ -15,7 +15,7 @@ jobs:
       runs-on: ubuntu-latest
       defaults:
         run:
-          working-directory: ./Backend-Kattencafe
+          working-directory: ./Backend-Example
       steps:
       - uses: actions/checkout@v4
       - name: Setup .NET
@@ -44,4 +44,4 @@ jobs:
           with:
               push: true
               tags: ${{ secrets.DOCKER_USERNAME }}/fontys-ips3-catcafe-backend:latest
-              context: ./Backend-Kattencafe
+              context: ./Backend-Example
