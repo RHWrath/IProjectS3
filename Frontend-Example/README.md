@@ -13,3 +13,7 @@ Remember to never use normal npm with this project ever again. If you do, your n
 ## Running the app
 
 Run `pnpm start` to start the app in development mode.
+
+## Installing Components
+
+Run `pnpm npx solidui-cli@0.6.8 add text-field`

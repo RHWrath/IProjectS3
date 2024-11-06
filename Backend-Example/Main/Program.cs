@@ -1,5 +1,6 @@
-using Backend_Example;
-using Backend_Example.Service;
+using Main;
+using Main.Controllers;
+using DAL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,7 +31,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.SetupWeather();
 app.SetupCat();
 app.SetupMenuCard();
 

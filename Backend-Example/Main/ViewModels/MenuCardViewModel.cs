@@ -1,4 +1,4 @@
-﻿namespace Backend_Example.ViewModels
+﻿namespace Main.ViewModels
 {
     public class MenuCardViewModel
     {
