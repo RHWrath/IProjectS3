@@ -21,9 +21,9 @@ namespace Backend_Test
             IsActive = true;
             return new List<CatModel>() { new CatModel() 
             {
-                ID  = ID,
-                Name = Name,
-                Description = Description,
+                CatID  = ID,
+                CatName = Name,
+                CatDescription = Description,
                 IMG = IMG
             } 
             };

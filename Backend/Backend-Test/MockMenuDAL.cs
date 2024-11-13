@@ -10,10 +10,10 @@ namespace Backend_Test
 {
     public class MockMenuDAL : IMenuCardDAL
     {
-        public int ID = 1;
-        public string Name = "Coffee";
-        public string Description = "empty";
-        public double Price = 0;
+        private int ID = 1;
+        private string Name = "Coffee";
+        private string Description = "empty";
+        private double Price = 0;
         public bool IsActive = false;
 
         public List<MenuCardModel> GetMenuCards()

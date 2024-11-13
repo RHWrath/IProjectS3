@@ -21,10 +21,10 @@ namespace Main.Controllers
                 {
                     CatViewModel catViewModel = new();
 
-                    catViewModel.ID = catModel.ID;
-                    catViewModel.Name = catModel.Name;
-                    catViewModel.Description = catModel.Description;
-                    catViewModel.IMG = catModel.IMG;
+                    catViewModel.CatID = catModel.CatID;
+                    catViewModel.CatName = catModel.CatName;
+                    catViewModel.CatDescription = catModel.CatDescription;
+                    catViewModel.CatIMG = catModel.IMG;
 
                     Catlist.Add(catViewModel);
                 }
