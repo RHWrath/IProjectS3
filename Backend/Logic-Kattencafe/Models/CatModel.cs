@@ -2,9 +2,9 @@
 {
     public class CatModel
     {
-        public int CatID { get; set; }
-        public string CatName { get; set; }
-        public string CatDescription { get; set; }
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
         public string IMG { get; set; }
     }
 }

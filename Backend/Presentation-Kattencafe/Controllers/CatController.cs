@@ -21,9 +21,9 @@ namespace Main.Controllers
                 {
                     CatViewModel catViewModel = new();
 
-                    catViewModel.CatID = catModel.CatID;
-                    catViewModel.CatName = catModel.CatName;
-                    catViewModel.CatDescription = catModel.CatDescription;
+                    catViewModel.CatID = catModel.ID;
+                    catViewModel.CatName = catModel.Name;
+                    catViewModel.CatDescription = catModel.Description;
                     catViewModel.CatIMG = catModel.IMG;
 
                     Catlist.Add(catViewModel);

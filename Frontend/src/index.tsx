@@ -18,8 +18,6 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   );
 }
 
-// render(() => <Homepage />, root!);
-
 render(
   () => (
       <Router>
@@ -28,7 +26,7 @@ render(
           <Route path="/MenuPage" component={Menupage} />
           <Route path="/CatListPage" component={CatListPage} />
           <Route path="/AboutUsPage" component={AboutUsPage} />
-
+          <Route path="/api" />
       </Router>
       
   ),

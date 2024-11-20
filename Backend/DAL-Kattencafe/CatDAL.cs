@@ -21,9 +21,9 @@ namespace DAL
             foreach (CatModel CatModels in _dbContext.CatLists) 
             { 
                 CatModel CatModel = new CatModel();
-                CatModel.CatID = CatModels.CatID;
-                CatModel.CatName = CatModels.CatName;
-                CatModel.CatDescription = CatModels.CatDescription;
+                CatModel.ID = CatModels.ID;
+                CatModel.Name = CatModels.Name;
+                CatModel.Description = CatModels.Description;
                 CatModel.IMG = CatModels.IMG;
 
                 CatList.Add(CatModel);

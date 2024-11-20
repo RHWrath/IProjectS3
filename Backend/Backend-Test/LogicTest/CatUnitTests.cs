@@ -18,8 +18,8 @@ namespace Backend_Test
             //assert
             Assert.AreEqual(1, TestResult.Count());
             var Cat = TestResult.First();
-            Assert.AreEqual("spinx", Cat.CatName);
-            Assert.AreEqual("empty", Cat.CatDescription);
+            Assert.AreEqual("spinx", Cat.Name);
+            Assert.AreEqual("empty", Cat.Description);
             Assert.AreEqual(true, mockDAL.IsActive);
 
         }
