@@ -17,7 +17,7 @@ interface Cat{
 }
 
 const CatListPage: Component = () => {
-  const [cats] = createResource<Cat[] | undefined>(() => fetch("/api/Cat").then(body=>body.json()))
+  const [cats] = createResource<Cat[] | undefined>(() => fetch("https://api.localhost/Cat").then(body=>body.json()))
   createEffect(() => console.log(cats()))
 
   return (

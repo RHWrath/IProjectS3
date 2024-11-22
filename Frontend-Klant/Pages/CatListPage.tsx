@@ -17,7 +17,7 @@ interface Cat{
 }
 
 const CatListPage: Component = () => {
-  const [cats] = createResource<Cat[] | undefined>(() => fetch("/api/Cat").then(body=>body.json()))
+  const [cats] = createResource<Cat[] | undefined>(() => fetch("https://api.localhost/Cat").then(body=>body.json()))
   createEffect(() => console.log(cats()))
 
   return (
@@ -34,7 +34,7 @@ const CatListPage: Component = () => {
               <CardContent>
                 <img
                   class="cat-card-image"
-                  src= {item.catIMG}
+                  src= {`https://admin.localhost${item.catIMG}`}
                   alt="Placeholder"
                 />
               </CardContent>

@@ -1,7 +1,10 @@
-localhost
-
-handle_path /api/* {
+api.localhost {
 	reverse_proxy :5018
 }
 
-reverse_proxy :3000
+admin.localhost {
+	reverse_proxy :3001
+}
+localhost {
+	reverse_proxy :3000
+}

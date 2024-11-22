@@ -18,7 +18,7 @@ interface MenuItem{
 
 
 const MenuPage: Component = () => {
-  const [Menu] = createResource<MenuItem[] | undefined>(() => fetch("/api/MenuCard").then(body=>body.json()))
+  const [Menu] = createResource<MenuItem[] | undefined>(() => fetch("https://api.localhost/MenuCard").then(body=>body.json()))
       createEffect(() => console.log(Menu()))
   
   
