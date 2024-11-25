@@ -6,9 +6,7 @@ const HomePage: Component = () => {
     <div>
         <Navbar/>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Dolorum esse cum quaerat, alias adipisci,
-          suscipit unde vitae ea debitis harum modi soluta? Corrupti sequi cumque dicta ut odit dolorem exercitationem.
+          Welcome manager
         </p>
     </div>
   );

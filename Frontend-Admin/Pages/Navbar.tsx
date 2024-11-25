@@ -26,13 +26,7 @@ const Navbar: Component = () => {
         
         <NavigationMenuItem>
           <NavigationMenuTrigger as="a" href="/CatListPage">
-            Onze Katten
-          </NavigationMenuTrigger>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuTrigger as="a" href="/AboutUsPage">
-            Over ons
+            De Katten
           </NavigationMenuTrigger>
         </NavigationMenuItem>
       </NavigationMenu>

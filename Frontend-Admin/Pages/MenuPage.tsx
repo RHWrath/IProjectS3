@@ -9,6 +9,14 @@ import {
   CardHeader,
   CardTitle
 } from "~/components/ui/card"
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIcon,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuTrigger
+} from "~/components/ui/navigation-menu"
 
 interface MenuItem{
   description: string;
@@ -25,6 +33,13 @@ const MenuPage: Component = () => {
   return (
     <div>
       <Navbar/>
+      <NavigationMenu>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger as="a" href="/CreateCatPage">
+                    Nieuwe Menu item toevoegen
+                  </NavigationMenuTrigger>
+                </NavigationMenuItem>
+       </NavigationMenu>
       <For each ={Menu()}>
         {item => 
           <div>

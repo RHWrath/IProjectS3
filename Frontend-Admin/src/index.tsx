@@ -3,11 +3,10 @@ import { render } from 'solid-js/web';
 import { Router, Route } from "@solidjs/router";
 
 import './index.css';
-import App from './App';
 import Homepage from '../Pages/HomePage';
 import Menupage from '../Pages/MenuPage';
 import CatListPage from '../Pages/CatListPage';
-import AboutUsPage from '../Pages/AboutUsPage';
+import CreateCatPage from '../Pages/CreateCatPage';
 
 
 const root = document.getElementById('root');
@@ -25,7 +24,7 @@ render(
           <Route path="/Homepage" component={Homepage} />
           <Route path="/MenuPage" component={Menupage} />
           <Route path="/CatListPage" component={CatListPage} />
-          <Route path="/AboutUsPage" component={AboutUsPage} />
+          <Route path="/CreateCatPage" component={CreateCatPage} />
       </Router>
       
   ),

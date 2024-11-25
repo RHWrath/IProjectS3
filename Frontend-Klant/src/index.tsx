@@ -3,7 +3,6 @@ import { render } from 'solid-js/web';
 import { Router, Route } from "@solidjs/router";
 
 import './index.css';
-import App from './App';
 import Homepage from '../Pages/HomePage';
 import Menupage from '../Pages/MenuPage';
 import CatListPage from '../Pages/CatListPage';

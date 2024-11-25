@@ -5,10 +5,12 @@ const HomePage: Component = () => {
   return (
     <div>
         <Navbar/>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Dolorum esse cum quaerat, alias adipisci,
-          suscipit unde vitae ea debitis harum modi soluta? Corrupti sequi cumque dicta ut odit dolorem exercitationem.
+        <h1>Welcome to Catnap café!</h1>
+          <p>
+            Step into a cozy haven where the aroma of freshly brewed coffee mingles with the soothing purrs of our feline friends.
+            At  Catnap café, we combine the joys of a welcoming café atmosphere with the irresistible charm of cats.
+            Whether you're here to sip on your favorite latte, relax with a book, or make a new furry friend, our space is designed to bring comfort, happiness, and a touch of whiskered wonder.
+            Come for the coffee, stay for the cuddles. your purr-fect escape awaits!
         </p>
     </div>
   );

@@ -9,6 +9,14 @@ import {
   CardTitle
 } from "~/components/ui/card"
 import "../css/CategoryCardCss.css";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIcon,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuTrigger
+} from "~/components/ui/navigation-menu"
 
 interface Cat{
   catDescription: string;
@@ -23,6 +31,13 @@ const CatListPage: Component = () => {
   return (
     <div>
       <Navbar/>
+      <NavigationMenu>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger as="a" href="/CreateCatPage">
+                    Nieuwe Kat toevoegen
+                  </NavigationMenuTrigger>
+                </NavigationMenuItem>
+       </NavigationMenu>
       <For each ={cats()}>
         {item => 
           <div>
