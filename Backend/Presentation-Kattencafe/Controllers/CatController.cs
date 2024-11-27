@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Main.ViewModels;
+﻿using Main.ViewModels;
 using DAL;
 using Logic.Models;
 using Logic.Interfaces;
@@ -11,7 +10,7 @@ namespace Main.Controllers
     {
         public static void SetupCat(this WebApplication app)
         {
-            app.MapGet("/Cat", (DatabaseContext db) =>
+            app.MapGet("/GetCats", (DatabaseContext db) =>
             {
                 ICatDAL catDAL = new CatDAL(db);
                 CatLogic catlogic = new CatLogic(catDAL);
@@ -34,6 +33,39 @@ namespace Main.Controllers
             .WithName("GetCats")
             .WithOpenApi()
             .WithDescription("Gets Information of all the Cats");
-        }
+
+            app.MapPost("/CreateCat", 
+                (DatabaseContext db, string CatName, String CatDescription, string? CatIMG) => 
+            {
+                ICatDAL catDAL = new CatDAL(db);
+                CatLogic catlogic = new CatLogic(catDAL);
+                catlogic.AddCat(CatName, CatDescription, CatIMG);
+            })
+            .WithName("CreateCat")
+            .WithOpenApi()
+            .WithDescription("Creates a Cat");
+            
+            app.MapPut("/UpdateCat",
+                (DatabaseContext db, string CatName, String CatDescription, string? CatIMG, int CatID) =>
+                    {
+                        ICatDAL catDAL = new CatDAL(db);
+                        CatLogic catlogic = new CatLogic(catDAL);
+                        catlogic.UpdateCat(CatName, CatDescription, CatIMG, CatID);
+                    })
+                    .WithName("UpdateCat")
+                    .WithOpenApi()
+                    .WithDescription("Updates a Cat");
+            
+            app.MapDelete("/DeleteCat",
+                    (DatabaseContext db, int CatID) =>
+                    {
+                        ICatDAL catDAL = new CatDAL(db);
+                        CatLogic catlogic = new CatLogic(catDAL);
+                        catlogic.DeleteCat(CatID);
+                    })
+                    .WithName("DeleteCat")
+                    .WithOpenApi()
+                    .WithDescription("Deletes a Cat");
+                }
     }
 }

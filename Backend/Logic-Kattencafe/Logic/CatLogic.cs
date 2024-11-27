@@ -1,10 +1,5 @@
 ﻿using Logic.Interfaces;
 using Logic.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Logic
 {
@@ -12,11 +7,18 @@ namespace Logic
     {
         private ICatDAL CatDAL { get; } 
         public CatLogic(ICatDAL catDAL) 
-        {
-            this.CatDAL = catDAL;
-        }
+        { this.CatDAL = catDAL; }
 
-        public List<CatModel> GetCats() { return CatDAL.GetCatList(); }
-
+        public List<CatModel> GetCats() 
+        { return CatDAL.GetCatList(); }
+        
+        public void AddCat(string catName, string CatDescription, string catIMG)
+        { CatDAL.AddNewCat(catName, CatDescription, catIMG);}
+        
+        public void UpdateCat(string CatName, string CatDescription, string? catIMG, int CatID)
+        { CatDAL.UpdateCat(CatName, CatDescription, catIMG, CatID);}
+        
+        public void DeleteCat(int CatID) 
+        { CatDAL.DeleteCat(CatID);}
     }
 }

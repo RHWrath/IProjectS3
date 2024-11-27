@@ -30,6 +30,19 @@ namespace Backend_Test
         
         }
 
+        public void AddNewCat(string CatName, string CatDescription, string CatIMG)
+        {
+            throw new NotImplementedException();
+        }
 
+        public void UpdateCat(string CatName, string CatDescription, string CatIMG, int CatID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteCat(int CatID)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
