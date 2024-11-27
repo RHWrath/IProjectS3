@@ -33,6 +33,39 @@ namespace Main.Controllers
             .WithName("GetMenuCard")
             .WithOpenApi()
             .WithDescription("Gets Information of the entire menu card");
+            
+            app.MapPost("/CreateMenuItem",
+                    (DatabaseContext db,string MenuItemName, string MenuItemDescription, double Price) =>
+            {
+                IMenuCardDAL MenuDAL = new MenuDAL(db);
+                MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
+                menuCardLogic.AddMenuItem(MenuItemName, MenuItemDescription, Price);
+                
+            })
+                .WithName("CreateMenuItem")
+                .WithOpenApi()
+                .WithDescription("Creates a new menu card");
+            
+            app.MapPut("/UpdateMenuItem",
+                (DatabaseContext db, string MenuItemName, string MenuItemDescription, double Price, int MenuCardId) =>
+            {
+                IMenuCardDAL MenuDAL = new MenuDAL(db);
+                MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
+                menuCardLogic.UpdateMenuItem(MenuItemName, MenuItemDescription, Price, MenuCardId);
+            })
+                .WithName("UpdateMenuItem")
+                .WithOpenApi()
+                .WithDescription("Updates a new menu card");
+            
+            app.MapDelete("/DeleteMenuItem", (DatabaseContext db, int MenuCardID) =>
+            {
+                IMenuCardDAL MenuDAL = new MenuDAL(db);
+                MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
+                menuCardLogic.DeleteMenuItem(MenuCardID);
+            })
+                .WithName("DeleteMenuItem")
+                .WithOpenApi()
+                .WithDescription("Deletes a menu card");
         }
     }
 }
