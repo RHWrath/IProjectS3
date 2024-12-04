@@ -1,3 +1,4 @@
+//#region Imports
 import { createEffect, createResource, For, Show, type Component } from 'solid-js';
 import Navbar from './Navbar';
 import {
@@ -17,16 +18,28 @@ import {
   NavigationMenuLink,
   NavigationMenuTrigger
 } from "~/components/ui/navigation-menu"
+import { reload, useNavigate } from "@solidjs/router";
+//#endregion
+
 
 interface Cat{
+  catID: number;
   catDescription: string;
   catIMG: string;
   catName: string;
 }
 
 const CatListPage: Component = () => {
-  const [cats] = createResource<Cat[] | undefined>(() => fetch("https://api.localhost/GetCats").then(body=>body.json()))
-  createEffect(() => console.log(cats()))
+  
+  const [cats] = createResource<Cat[] | undefined>(() => fetch("https://api.localhost/Cats").then(body=>body.json()))
+  createEffect(() => console.log(cats()))  
+
+
+  function DeleteCat(Id : Number) {
+    const createCatApiCall = fetch(`https://api.localhost/Cats?CatID=${Id}`, {method: "DELETE"});
+    setTimeout(() => location.reload(), 3000);
+    
+  }
 
   return (
     <div>
@@ -52,6 +65,9 @@ const CatListPage: Component = () => {
                   src= {item.catIMG}
                   alt="Placeholder"
                 />
+                <div class="flex justify-right">
+                  <button onclick={() => DeleteCat(item.catID)}>Delete</button>
+                </div>
               </CardContent>
             </Card>
           </div>

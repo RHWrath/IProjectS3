@@ -7,7 +7,7 @@ import Homepage from '../Pages/HomePage';
 import Menupage from '../Pages/MenuPage';
 import CatListPage from '../Pages/CatListPage';
 import CreateCatPage from '../Pages/CreateCatPage';
-
+import CreateMenuItemPage from '../Pages/CreateMenuItemPage';
 
 const root = document.getElementById('root');
 
@@ -25,6 +25,7 @@ render(
           <Route path="/MenuPage" component={Menupage} />
           <Route path="/CatListPage" component={CatListPage} />
           <Route path="/CreateCatPage" component={CreateCatPage} />
+          <Route path="CreateMenuItemPage" component={CreateMenuItemPage}/>
       </Router>
       
   ),

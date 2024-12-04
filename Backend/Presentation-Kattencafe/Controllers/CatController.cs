@@ -8,9 +8,9 @@ namespace Main.Controllers
 {
     public static class CatController
     {
-        public static void SetupCat(this WebApplication app)
+        public static RouteGroupBuilder SetupCats(this RouteGroupBuilder group)
         {
-            app.MapGet("/GetCats", (DatabaseContext db) =>
+            group.MapGet("/", (DatabaseContext db) =>
             {
                 ICatDAL catDAL = new CatDAL(db);
                 CatLogic catlogic = new CatLogic(catDAL);
@@ -34,7 +34,7 @@ namespace Main.Controllers
             .WithOpenApi()
             .WithDescription("Gets Information of all the Cats");
 
-            app.MapPost("/CreateCat", 
+            group.MapPost("/", 
                 (DatabaseContext db, string CatName, String CatDescription, string? CatIMG) => 
             {
                 ICatDAL catDAL = new CatDAL(db);
@@ -45,7 +45,7 @@ namespace Main.Controllers
             .WithOpenApi()
             .WithDescription("Creates a Cat");
             
-            app.MapPut("/UpdateCat",
+            group.MapPut("/",
                 (DatabaseContext db, string CatName, String CatDescription, string? CatIMG, int CatID) =>
                     {
                         ICatDAL catDAL = new CatDAL(db);
@@ -56,7 +56,7 @@ namespace Main.Controllers
                     .WithOpenApi()
                     .WithDescription("Updates a Cat");
             
-            app.MapDelete("/DeleteCat",
+            group.MapDelete("/",
                     (DatabaseContext db, int CatID) =>
                     {
                         ICatDAL catDAL = new CatDAL(db);
@@ -66,6 +66,8 @@ namespace Main.Controllers
                     .WithName("DeleteCat")
                     .WithOpenApi()
                     .WithDescription("Deletes a Cat");
+            return group;
                 }
+        
     }
 }

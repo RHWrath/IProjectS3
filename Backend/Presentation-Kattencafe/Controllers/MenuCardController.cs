@@ -9,9 +9,9 @@ namespace Main.Controllers
 {
     public static class MenuCardController
     {
-        public static void SetupMenuCard(this WebApplication app)
+        public static RouteGroupBuilder SetupMenuCard(this RouteGroupBuilder group)
         {
-            app.MapGet("/MenuCard", (DatabaseContext db) =>
+            group.MapGet("/", (DatabaseContext db) =>
             {
                 IMenuCardDAL MenuDAL = new MenuDAL(db);
                 MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
@@ -34,7 +34,7 @@ namespace Main.Controllers
             .WithOpenApi()
             .WithDescription("Gets Information of the entire menu card");
             
-            app.MapPost("/CreateMenuItem",
+            group.MapPost("/",
                     (DatabaseContext db,string MenuItemName, string MenuItemDescription, double Price) =>
             {
                 IMenuCardDAL MenuDAL = new MenuDAL(db);
@@ -46,7 +46,7 @@ namespace Main.Controllers
                 .WithOpenApi()
                 .WithDescription("Creates a new menu card");
             
-            app.MapPut("/UpdateMenuItem",
+            group.MapPut("/",
                 (DatabaseContext db, string MenuItemName, string MenuItemDescription, double Price, int MenuCardId) =>
             {
                 IMenuCardDAL MenuDAL = new MenuDAL(db);
@@ -57,7 +57,7 @@ namespace Main.Controllers
                 .WithOpenApi()
                 .WithDescription("Updates a new menu card");
             
-            app.MapDelete("/DeleteMenuItem", (DatabaseContext db, int MenuCardID) =>
+            group.MapDelete("/", (DatabaseContext db, int MenuCardID) =>
             {
                 IMenuCardDAL MenuDAL = new MenuDAL(db);
                 MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
@@ -66,6 +66,7 @@ namespace Main.Controllers
                 .WithName("DeleteMenuItem")
                 .WithOpenApi()
                 .WithDescription("Deletes a menu card");
+            return group;
         }
     }
 }

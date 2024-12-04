@@ -19,6 +19,7 @@ import {
 } from "~/components/ui/navigation-menu"
 
 interface MenuItem{
+  id : number;
   description: string;
   name: string;
   price: number;
@@ -30,12 +31,18 @@ const MenuPage: Component = () => {
       createEffect(() => console.log(Menu()))
   
   
+  function DeleteMenuItem(Id : Number) {
+    const createCatApiCall = fetch(`https://api.localhost/MenuCard?MenuCardID=${Id}`, {method: "DELETE"});
+    setTimeout(() => location.reload(), 3000);
+    
+  }
+
   return (
     <div>
       <Navbar/>
       <NavigationMenu>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger as="a" href="/CreateCatPage">
+                  <NavigationMenuTrigger as="a" href="/CreateMenuItemPage">
                     Nieuwe Menu item toevoegen
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
@@ -55,6 +62,10 @@ const MenuPage: Component = () => {
                   alt="Placeholder"
                 />                
                 <p>€: {item.price}</p>
+                
+                <div class="flex justify-right">
+                  <button onclick={() => DeleteMenuItem(item.id)}>Delete</button>
+                </div>
               </CardContent>
             </Card>
           </div>
