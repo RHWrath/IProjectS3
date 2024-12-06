@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Main.ViewModels;
+﻿using Main.ViewModels;
 using DAL;
 using Logic.Models;
 using Logic.Interfaces;
@@ -40,28 +39,30 @@ namespace Main.Controllers
                 IMenuCardDAL MenuDAL = new MenuDAL(db);
                 MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
                 menuCardLogic.AddMenuItem(MenuItemName, MenuItemDescription, Price);
-                
+                return Results.Created();
             })
                 .WithName("CreateMenuItem")
                 .WithOpenApi()
                 .WithDescription("Creates a new menu card");
             
-            group.MapPut("/",
+            group.MapPut("/{MenuCardID}",
                 (DatabaseContext db, string MenuItemName, string MenuItemDescription, double Price, int MenuCardId) =>
             {
                 IMenuCardDAL MenuDAL = new MenuDAL(db);
                 MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
                 menuCardLogic.UpdateMenuItem(MenuItemName, MenuItemDescription, Price, MenuCardId);
+                return Results.Created();
             })
                 .WithName("UpdateMenuItem")
                 .WithOpenApi()
                 .WithDescription("Updates a new menu card");
             
-            group.MapDelete("/", (DatabaseContext db, int MenuCardID) =>
+            group.MapDelete("/{MenuCardID}", (DatabaseContext db, int MenuCardID) =>
             {
                 IMenuCardDAL MenuDAL = new MenuDAL(db);
                 MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
                 menuCardLogic.DeleteMenuItem(MenuCardID);
+                return Results.Ok();
             })
                 .WithName("DeleteMenuItem")
                 .WithOpenApi()

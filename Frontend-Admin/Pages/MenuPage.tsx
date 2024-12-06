@@ -40,13 +40,14 @@ const MenuPage: Component = () => {
   return (
     <div>
       <Navbar/>
+      
       <NavigationMenu>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger as="a" href="/CreateMenuItemPage">
-                    Nieuwe Menu item toevoegen
-                  </NavigationMenuTrigger>
-                </NavigationMenuItem>
-       </NavigationMenu>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger as="a" href="/CreateMenuItemPage">
+            Nieuwe Menu item toevoegen
+          </NavigationMenuTrigger>
+        </NavigationMenuItem>
+      </NavigationMenu>
       <For each ={Menu()}>
         {item => 
           <div>
