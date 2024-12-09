@@ -31,7 +31,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.SetupCat();
-app.SetupMenuCard();
+
+app.MapGroup("/Cats").SetupCats().WithTags("Cats");
+app.MapGroup("/MenuCard").SetupMenuCard().WithTags("MenuCard");
 
 app.Run();

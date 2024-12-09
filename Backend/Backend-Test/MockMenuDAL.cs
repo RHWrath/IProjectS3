@@ -30,6 +30,19 @@ namespace Backend_Test
         
         }
 
+        public void AddMenuItem(string MenuItemName, string MenuItemDescription, Double MenuItemPrice)
+        {
+            throw new NotImplementedException();
+        }
 
+        public void UpdateMenuItem(string MenuItemName, string MenuItemDescription, Double MenuItemPrice, int MenuCardId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteMenuItem(int MenuCardId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

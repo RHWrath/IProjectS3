@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Main.ViewModels;
+﻿using Main.ViewModels;
 using DAL;
 using Logic.Models;
 using Logic.Interfaces;
@@ -9,9 +8,9 @@ namespace Main.Controllers
 {
     public static class CatController
     {
-        public static void SetupCat(this WebApplication app)
+        public static RouteGroupBuilder SetupCats(this RouteGroupBuilder group)
         {
-            app.MapGet("/Cat", (DatabaseContext db) =>
+            group.MapGet("/", (DatabaseContext db) =>
             {
                 ICatDAL catDAL = new CatDAL(db);
                 CatLogic catlogic = new CatLogic(catDAL);
@@ -21,9 +20,9 @@ namespace Main.Controllers
                 {
                     CatViewModel catViewModel = new();
 
-                    catViewModel.CatID = catModel.CatID;
-                    catViewModel.CatName = catModel.CatName;
-                    catViewModel.CatDescription = catModel.CatDescription;
+                    catViewModel.CatID = catModel.ID;
+                    catViewModel.CatName = catModel.Name;
+                    catViewModel.CatDescription = catModel.Description;
                     catViewModel.CatIMG = catModel.IMG;
 
                     Catlist.Add(catViewModel);
@@ -34,6 +33,44 @@ namespace Main.Controllers
             .WithName("GetCats")
             .WithOpenApi()
             .WithDescription("Gets Information of all the Cats");
-        }
+
+            group.MapPost("/", 
+                (DatabaseContext db, string CatName, String CatDescription, string? CatIMG) => 
+            {
+                ICatDAL catDAL = new CatDAL(db);
+                CatLogic catlogic = new CatLogic(catDAL);
+                catlogic.AddCat(CatName, CatDescription, CatIMG);
+                return Results.Created();
+            })
+            .WithName("CreateCat")
+            .WithOpenApi()
+            .WithDescription("Creates a Cat");
+            
+            group.MapPut("/{CatID}",
+                (DatabaseContext db, string CatName, String CatDescription, string? CatIMG, int CatID) =>
+                    {
+                        ICatDAL catDAL = new CatDAL(db);
+                        CatLogic catlogic = new CatLogic(catDAL);
+                        catlogic.UpdateCat(CatName, CatDescription, CatIMG, CatID);
+                        return Results.Created();
+                    })
+                    .WithName("UpdateCat")
+                    .WithOpenApi()
+                    .WithDescription("Updates a Cat");
+            
+            group.MapDelete("/{CatID}",
+                    (DatabaseContext db, int CatID) =>
+                    {
+                        ICatDAL catDAL = new CatDAL(db);
+                        CatLogic catlogic = new CatLogic(catDAL);
+                        catlogic.DeleteCat(CatID);
+                        return Results.Ok();
+                    })
+                    .WithName("DeleteCat")
+                    .WithOpenApi()
+                    .WithDescription("Deletes a Cat");
+            return group;
+                }
+        
     }
 }

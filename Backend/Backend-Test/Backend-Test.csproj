@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Logic-Kattencafe\Logic-Kattencafe.csproj" />
-    <ProjectReference Include="..\Presentation-Kattencafe\Logic-Kattencafe.csproj" />
   </ItemGroup>
 
   <ItemGroup>

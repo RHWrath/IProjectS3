@@ -21,15 +21,28 @@ namespace Backend_Test
             IsActive = true;
             return new List<CatModel>() { new CatModel() 
             {
-                CatID  = ID,
-                CatName = Name,
-                CatDescription = Description,
+                ID  = ID,
+                Name = Name,
+                Description = Description,
                 IMG = IMG
             } 
             };
         
         }
 
+        public void AddNewCat(string CatName, string CatDescription, string CatIMG)
+        {
+            throw new NotImplementedException();
+        }
 
+        public void UpdateCat(string CatName, string CatDescription, string CatIMG, int CatID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteCat(int CatID)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

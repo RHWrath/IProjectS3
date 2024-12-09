@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Main.ViewModels;
+﻿using Main.ViewModels;
 using DAL;
 using Logic.Models;
 using Logic.Interfaces;
@@ -9,9 +8,9 @@ namespace Main.Controllers
 {
     public static class MenuCardController
     {
-        public static void SetupMenuCard(this WebApplication app)
+        public static RouteGroupBuilder SetupMenuCard(this RouteGroupBuilder group)
         {
-            app.MapGet("/MenuCard", (DatabaseContext db) =>
+            group.MapGet("/", (DatabaseContext db) =>
             {
                 IMenuCardDAL MenuDAL = new MenuDAL(db);
                 MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
@@ -33,6 +32,42 @@ namespace Main.Controllers
             .WithName("GetMenuCard")
             .WithOpenApi()
             .WithDescription("Gets Information of the entire menu card");
+            
+            group.MapPost("/",
+                    (DatabaseContext db,string MenuItemName, string MenuItemDescription, double Price) =>
+            {
+                IMenuCardDAL MenuDAL = new MenuDAL(db);
+                MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
+                menuCardLogic.AddMenuItem(MenuItemName, MenuItemDescription, Price);
+                return Results.Created();
+            })
+                .WithName("CreateMenuItem")
+                .WithOpenApi()
+                .WithDescription("Creates a new menu card");
+            
+            group.MapPut("/{MenuCardID}",
+                (DatabaseContext db, string MenuItemName, string MenuItemDescription, double Price, int MenuCardId) =>
+            {
+                IMenuCardDAL MenuDAL = new MenuDAL(db);
+                MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
+                menuCardLogic.UpdateMenuItem(MenuItemName, MenuItemDescription, Price, MenuCardId);
+                return Results.Created();
+            })
+                .WithName("UpdateMenuItem")
+                .WithOpenApi()
+                .WithDescription("Updates a new menu card");
+            
+            group.MapDelete("/{MenuCardID}", (DatabaseContext db, int MenuCardID) =>
+            {
+                IMenuCardDAL MenuDAL = new MenuDAL(db);
+                MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
+                menuCardLogic.DeleteMenuItem(MenuCardID);
+                return Results.Ok();
+            })
+                .WithName("DeleteMenuItem")
+                .WithOpenApi()
+                .WithDescription("Deletes a menu card");
+            return group;
         }
     }
 }
