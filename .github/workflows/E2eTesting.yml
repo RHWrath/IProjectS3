@@ -19,7 +19,7 @@ jobs:
               run: npm install -g pnpm
 
             - name: Install dependencies
-              run: pnpm install
+              run: pnpm install -r
 
             - name: Set environment variable for testing (ASPNETCORE_ENVIRONMENT)
               run: echo "ASPNETCORE_ENVIRONMENT=CypressTest" >> $GITHUB_ENV
@@ -27,7 +27,7 @@ jobs:
             - name: Start Program
               run: |
                   # Start the backend in the background
-                  nohup dotnet run --project ./Backend-Example/Presentation/Presentation.csproj &> backend.log &
+                  bash start.sh
 
                   # Wait for the backend to be fully initialized
                   timeout=300
@@ -46,4 +46,4 @@ jobs:
 
 
             - name: Run Cypress tests
-              run: pnpm npx cypress run
+              run: cd cypress && pnpm npx cypress run
