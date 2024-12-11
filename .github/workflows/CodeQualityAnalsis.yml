@@ -21,7 +21,7 @@ jobs:
               run: pnpm install -r 
 
             - name: Run Code quality lint tests for Admin
-              run: cd Frontend-Admin && npm init @eslint/config@9.16.0
+              run: cd Frontend-Admin && npm init @eslint/mjs@9.16.0
 
             - name: Run Code quality lint tests for Klant
-              run: cd Frontend-Klant && npm init @eslint/config@9.16.0
+              run: cd Frontend-Klant && npm init @eslint/mjs@9.16.0
