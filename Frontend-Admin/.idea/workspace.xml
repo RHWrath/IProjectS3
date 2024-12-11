@@ -10,9 +10,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2pQQ6mk16z4gOOW1slLnSUJds4Z" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -21,6 +21,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "Dev",
     "last_opened_file_path": "C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Frontend-Admin",
     "nodejs_package_manager_path": "pnpm",
@@ -43,6 +44,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732695647545</updated>
       <workItem from="1732695649815" duration="28000" />
+      <workItem from="1733906394136" duration="18000" />
     </task>
     <servers />
   </component>
