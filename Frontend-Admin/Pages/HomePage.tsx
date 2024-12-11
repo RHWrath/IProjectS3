@@ -1,6 +1,5 @@
 import type { Component } from 'solid-js';
 import Navbar from './Navbar';
-import { TextField, TextFieldInput, TextFieldLabel } from "~/components/ui/text-field"
 
 const HomePage: Component = () => {
   return (

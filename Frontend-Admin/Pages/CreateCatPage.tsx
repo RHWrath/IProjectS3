@@ -1,18 +1,12 @@
 //#region Imports
-import { createEffect, createResource, createSignal, For, Show, type Component } from 'solid-js';
+import {createSignal, type Component } from 'solid-js';
 import Navbar from './Navbar';
 import "../css/CategoryCardCss.css";
 import { useNavigate } from "@solidjs/router";
 import { TextField, TextFieldInput, TextFieldLabel } from "~/components/ui/text-field"
 import { showToast, Toaster } from "~/components/ui/toast"
-import { title } from 'process';
 //#endregion
 
-interface Cat{
-  catDescription: string;
-  catIMG: string;
-  catName: string;
-}
 
 const CreateCatPage: Component = () => {
 
@@ -22,7 +16,7 @@ const CreateCatPage: Component = () => {
   const navigate = useNavigate();
 
   function createCat() {
-    const createCatApiCall = fetch(`https://api.localhost/Cats?CatName=${GetCatName()}&CatDescription=${GetCatDiscription()}`, {method: "POST"});
+    fetch(`https://api.localhost/Cats?CatName=${GetCatName()}&CatDescription=${GetCatDiscription()}`, {method: "POST"});
     showToast({title: "kat gemaakt", description: "kat is aangemaakt je wordt terug gestuurd"})
     setTimeout(() => navigate("/CatListPage"), 2000)
   }

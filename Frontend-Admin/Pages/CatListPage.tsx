@@ -1,28 +1,22 @@
 //#region Imports
-import { createEffect, createResource, For, Show, type Component } from 'solid-js';
+import { createEffect, createResource, For,type Component } from 'solid-js';
 import Navbar from './Navbar';
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle
 } from "~/components/ui/card"
 import "../css/CategoryCardCss.css";
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIcon,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuTrigger
 } from "~/components/ui/navigation-menu"
-import { reload, useNavigate } from "@solidjs/router";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
@@ -44,10 +38,9 @@ const CatListPage: Component = () => {
   createEffect(() => console.log(cats()))  
 
 
-  function DeleteCat(Id : Number) {
-    const createCatApiCall = fetch(`https://api.localhost/Cats/${Id}`, {method: "DELETE"});
-    setTimeout(() => location.reload(), 400);
-    
+  function DeleteCat(Id : number) {
+    fetch(`https://api.localhost/Cats/${Id}`, {method: "DELETE"});
+    setTimeout(() => location.reload(), 400);    
   }
 
   return (
