@@ -1,0 +1,49 @@
+name: End-to-end tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+    cypress-run:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Install pnpm
+              run: npm install -g pnpm
+
+            - name: Install dependencies
+              run: pnpm install
+
+            - name: Set environment variable for testing (ASPNETCORE_ENVIRONMENT)
+              run: echo "ASPNETCORE_ENVIRONMENT=CypressTest" >> $GITHUB_ENV
+
+            - name: Start Program
+              run: |
+                  # Start the backend in the background
+                  nohup dotnet run --project ./Backend-Example/Presentation/Presentation.csproj &> backend.log &
+
+                  # Wait for the backend to be fully initialized
+                  timeout=300
+                  end=$((SECONDS+timeout))
+                  while [ $SECONDS -lt $end ]; do
+                    curl --insecure https://localhost:5018/swagger/index.html && break
+                    echo "Waiting for backend to be ready..."
+                    sleep 5
+                  done
+
+                  if [ $SECONDS -ge $end ]; then
+                    echo "Backend did not start in time."
+                    cat backend.log  # Display backend logs for debugging
+                    exit 1
+                  fi
+
+
+            - name: Run Cypress tests
+              run: pnpm npx cypress run
