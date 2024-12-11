@@ -19,7 +19,10 @@ jobs:
 
             - name: Install dependencies
               run: pnpm install -r 
-
+              
+            - name: Install init
+              run: npm init
+            
             - name: Run Code quality lint tests for Admin
               run: cd Frontend-Admin && npm init @eslint/mjs@9.16.0
 
