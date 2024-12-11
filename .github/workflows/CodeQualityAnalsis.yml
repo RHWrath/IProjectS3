@@ -18,7 +18,13 @@ jobs:
               run: npm install -g pnpm
 
             - name: Install dependencies
-              run: pnpm install -r    
+              run: pnpm install -r 
+              
+            - name: Install Eslint Admin
+              run: cd Frontend-Admin && npm init @eslint/config@latest
+
+            - name: Install Eslint Klant
+              run: cd Frontend-Klant && npm init @eslint/config@latest
 
             - name: Run Code quality lint tests for Admin
               run: cd Frontend-Admin && pnpm npx eslint
