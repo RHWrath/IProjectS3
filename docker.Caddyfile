@@ -1,0 +1,16 @@
+{
+	admin off
+	debug
+	auto_https off
+}
+
+api.localhost {
+	reverse_proxy backend:5018
+}
+
+admin.localhost {
+	reverse_proxy frontend-admin:3001
+}
+localhost {
+	reverse_proxy frontend-klant:3000
+}

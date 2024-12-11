@@ -7,7 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f103854-a404-4208-999e-bbc115f2cbca" name="Changes" comment="" />
+    <list default="true" id="7f103854-a404-4208-999e-bbc115f2cbca" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/DAL-Kattencafe/DatabaseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL-Kattencafe/DatabaseContext.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
