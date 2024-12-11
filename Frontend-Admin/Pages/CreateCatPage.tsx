@@ -4,6 +4,8 @@ import Navbar from './Navbar';
 import "../css/CategoryCardCss.css";
 import { useNavigate } from "@solidjs/router";
 import { TextField, TextFieldInput, TextFieldLabel } from "~/components/ui/text-field"
+import { showToast, Toaster } from "~/components/ui/toast"
+import { title } from 'process';
 //#endregion
 
 interface Cat{
@@ -21,6 +23,7 @@ const CreateCatPage: Component = () => {
 
   function createCat() {
     const createCatApiCall = fetch(`https://api.localhost/Cats?CatName=${GetCatName()}&CatDescription=${GetCatDiscription()}`, {method: "POST"});
+    showToast({title: "kat gemaakt", description: "kat is aangemaakt je wordt terug gestuurd"})
     setTimeout(() => navigate("/CatListPage"), 2000)
   }
 
@@ -28,7 +31,7 @@ const CreateCatPage: Component = () => {
     <div>
       <Navbar/>
       <br/>
-      <div class="flex justify-left">
+      <div class="flex justify-center">
               <TextField>
                 <TextFieldLabel for="CatName">Kat naam:</TextFieldLabel>
                 <TextFieldInput onInput={e => setCatName(e.currentTarget.value)} value={GetCatName()} type="text" id="InputCatName" placeholder="Kat Naam" />
@@ -37,10 +40,10 @@ const CreateCatPage: Component = () => {
                 <TextFieldInput  onInput={e => setCatDiscription(e.currentTarget.value)} value={GetCatDiscription()} type="text" id="InputCatDescription" placeholder="Kat omschrijving:" />
               </TextField>
       </div>
-      <div>
+      <div class="flex justify-center">
         <button class="send-button" onclick={() => createCat()}>toevoegen</button>
       </div>
-
+      <Toaster/>
     </div>
   );
 };

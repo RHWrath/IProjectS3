@@ -19,6 +19,15 @@ import {
   NavigationMenuTrigger
 } from "~/components/ui/navigation-menu"
 import { reload, useNavigate } from "@solidjs/router";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger
+} from "~/components/ui/dialog"
 //#endregion
 
 
@@ -36,8 +45,8 @@ const CatListPage: Component = () => {
 
 
   function DeleteCat(Id : Number) {
-    const createCatApiCall = fetch(`https://api.localhost/Cats?CatID=${Id}`, {method: "DELETE"});
-    setTimeout(() => location.reload(), 3000);
+    const createCatApiCall = fetch(`https://api.localhost/Cats/${Id}`, {method: "DELETE"});
+    setTimeout(() => location.reload(), 400);
     
   }
 
@@ -58,6 +67,7 @@ const CatListPage: Component = () => {
               <CardHeader>
                 <CardTitle> {item.catName}  </CardTitle>
                 <CardDescription> {item.catDescription} </CardDescription>
+                <CardDescription> {item.catID} </CardDescription>
               </CardHeader>
               <CardContent>
                 <img
@@ -66,7 +76,19 @@ const CatListPage: Component = () => {
                   alt="Placeholder"
                 />
                 <div class="flex justify-right">
-                  <button onclick={() => DeleteCat(item.catID)}>Delete</button>
+                <Dialog>
+                  <DialogTrigger>Delete</DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader>
+                      <DialogTitle>Weet je zeker dat je deze wilt verwijderen?</DialogTitle>
+                    </DialogHeader>
+                    <DialogFooter>
+                      <button onclick={() => DeleteCat(item.catID)}>Delete</button>
+                    </DialogFooter>
+                  </DialogContent>
+                </Dialog>
+
+                  
                 </div>
               </CardContent>
             </Card>
