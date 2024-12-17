@@ -11,6 +11,9 @@ namespace Logic
 
         public List<CatModel> GetCats() 
         { return CatDAL.GetCatList(); }
+
+        public CatModel GetCatByID(int id)
+        { return CatDAL.GetCatByID(id); }
         
         public void AddCat(string catName, string CatDescription, string catIMG)
         { CatDAL.AddNewCat(catName, CatDescription, catIMG);}

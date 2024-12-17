@@ -10,6 +10,7 @@ namespace Main.Controllers
     {
         public static RouteGroupBuilder SetupCats(this RouteGroupBuilder group)
         {
+            
             group.MapGet("/", (DatabaseContext db) =>
             {
                 ICatDAL catDAL = new CatDAL(db);
@@ -34,6 +35,26 @@ namespace Main.Controllers
             .WithOpenApi()
             .WithDescription("Gets Information of all the Cats");
 
+            group.MapGet("/{CatID}", (DatabaseContext db, int ID) =>
+            {
+                ICatDAL catDAL = new CatDAL(db);
+                CatLogic catlogic = new CatLogic(catDAL);
+                CatModel catModel = new ();
+                CatViewModel catViewModel = new();
+                
+                catModel = catlogic.GetCatByID(ID);
+                
+                catViewModel.CatID = catModel.ID;
+                catViewModel.CatName = catModel.Name;
+                catViewModel.CatDescription = catModel.Description;
+                catViewModel.CatIMG = catModel.IMG;
+                
+                return catViewModel;
+            })
+            .WithName("Get Cat by ID")
+            .WithOpenApi()
+            .WithDescription("Gets Information of a cat by ID");
+            
             group.MapPost("/", 
                 (DatabaseContext db, string CatName, String CatDescription, string? CatIMG) => 
             {
