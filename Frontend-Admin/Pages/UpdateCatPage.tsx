@@ -32,10 +32,8 @@ const UpdateCatPage: Component = () => {
     console.log("kat description",GetCatName())
     console.log("kat ID",CatID)
 
-    fetch(`http://localhost:5018/Cats/${CatID}?CatName=${GetCatName()}&CatDescription=${GetCatDiscription()}`, {method: "PUT"})
-
-    //fetch(`http://api.localhost/Cats/${CatID}?CatName=${GetCatName()}&CatDescription=${GetCatDiscription()}`,
-    // {method: "PUT"} );
+    fetch(`https://api.localhost/Cats/${CatID}?CatName=${GetCatName()}&CatDescription=${GetCatDiscription()}`,
+    {method: "PUT"} );
     showToast({title: "kat aangepast", description: "kat is aangepast je wordt terug gestuurd"})
     localStorage.clear();
     setTimeout(() => navigate("/CatListPage"), 2000)
