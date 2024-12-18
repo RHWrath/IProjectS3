@@ -5,6 +5,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle
 } from "~/components/ui/card"
@@ -22,6 +23,8 @@ import {
   DialogTitle,
   DialogTrigger
 } from "~/components/ui/dialog"
+import { useNavigate } from "@solidjs/router";
+import { Button, buttonVariants } from "~/components/ui/button"
 //#endregion
 
 
@@ -33,14 +36,21 @@ interface Cat{
 }
 
 const CatListPage: Component = () => {
-  
+
+  const navigate = useNavigate();  
   const [cats] = createResource<Cat[] | undefined>(() => fetch("https://api.localhost/Cats").then(body=>body.json()))
   createEffect(() => console.log(cats()))  
 
 
   function DeleteCat(Id : number) {
     fetch(`https://api.localhost/Cats/${Id}`, {method: "DELETE"});
-    setTimeout(() => location.reload(), 400);    
+    //setTimeout(() => location.reload(), 400);    
+  }
+
+  function UpdateCat(Id : number) {
+      localStorage.CatID = Number(Id);
+      localStorage.setItem("CatID", Id.toPrecision());
+      setTimeout(() => navigate("/UpdateCatPage"), 400)
   }
 
   return (
@@ -68,22 +78,24 @@ const CatListPage: Component = () => {
                   src= {item.catIMG}
                   alt="Placeholder"
                 />
-                <div class="flex justify-right">
-                <Dialog>
-                  <DialogTrigger>Delete</DialogTrigger>
-                  <DialogContent>
-                    <DialogHeader>
-                      <DialogTitle>Weet je zeker dat je deze wilt verwijderen?</DialogTitle>
-                    </DialogHeader>
-                    <DialogFooter>
-                      <button onclick={() => DeleteCat(item.catID)}>Delete</button>
-                    </DialogFooter>
-                  </DialogContent>
-                </Dialog>
-
-                  
-                </div>
               </CardContent>
+              <CardFooter>
+                <div class="">
+                      <Dialog>
+                        <DialogTrigger><Button>Delete</Button></DialogTrigger>
+                        <DialogContent>
+                          <DialogHeader>
+                            <DialogTitle>Weet je zeker dat je deze wilt verwijderen?</DialogTitle>
+                          </DialogHeader>
+                          <DialogFooter>
+                            <Button onclick={() => DeleteCat(item.catID)}>Delete</Button>
+                          </DialogFooter>
+                        </DialogContent>
+                      </Dialog>
+                      <Button onclick={() => UpdateCat(item.catID)}>Update</Button>
+
+                  </div>
+              </CardFooter>
             </Card>
           </div>
         }

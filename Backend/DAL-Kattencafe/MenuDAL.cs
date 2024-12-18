@@ -27,9 +27,12 @@ namespace DAL
                 MenuCardList.Add(MenuModel);
             }
             return MenuCardList;
-
-
         }
+        
+        public MenuCardModel GetMenuByID(int ID)
+        {
+            return _dbContext.MenuCards.FirstOrDefault(x => x.ID == ID);
+        } 
 
         public void AddMenuItem(string MenuItemName, string MenuItemDescription, double MenuItemPrice)
         {

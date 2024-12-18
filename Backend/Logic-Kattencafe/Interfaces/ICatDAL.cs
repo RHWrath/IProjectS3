@@ -7,7 +7,7 @@ namespace Logic.Interfaces
         public List<CatModel> GetCatList();
         public CatModel GetCatByID(int catID);
         void AddNewCat(string CatName, string CatDescription, string? CatIMG);
-        void UpdateCat(string CatName, string CatDescription, string CatIMG, int CatID);
+        void UpdateCat(string CatName, string CatDescription, string? CatIMG, int CatID);
         void DeleteCat(int CatID);
     }
 }

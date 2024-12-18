@@ -15,7 +15,7 @@ namespace Logic
         public CatModel GetCatByID(int id)
         { return CatDAL.GetCatByID(id); }
         
-        public void AddCat(string catName, string CatDescription, string catIMG)
+        public void AddCat(string catName, string CatDescription, string? catIMG)
         { CatDAL.AddNewCat(catName, CatDescription, catIMG);}
         
         public void UpdateCat(string CatName, string CatDescription, string? catIMG, int CatID)

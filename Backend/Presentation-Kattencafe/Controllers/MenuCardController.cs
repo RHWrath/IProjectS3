@@ -33,6 +33,29 @@ namespace Main.Controllers
             .WithOpenApi()
             .WithDescription("Gets Information of the entire menu card");
             
+            group.MapGet("/{MenuID}", (DatabaseContext db, int MenuID) =>
+            {
+                IMenuCardDAL menuCardDal = new MenuDAL(db);
+                MenuCardLogic menuCardLogic = new MenuCardLogic(menuCardDal);
+                MenuCardModel menuCardModel = new ();
+                MenuCardViewModel menuCardViewModel = new();
+                List<MenuCardViewModel> MenuList = new ();
+                
+                menuCardModel = menuCardLogic.GetMenuByID(MenuID);
+                
+                menuCardViewModel.ID = menuCardModel.ID;
+                menuCardViewModel.Name = menuCardModel.Name;
+                menuCardViewModel.Description = menuCardModel.Description;
+                menuCardViewModel.Price = menuCardModel.Price;
+                
+                MenuList.Add(menuCardViewModel);
+                
+                return MenuList;
+            })
+            .WithName("GetSingleMenuCard")
+            .WithOpenApi()
+            .WithDescription("Gets Information of the entire menu card");
+            
             group.MapPost("/",
                     (DatabaseContext db,string MenuItemName, string MenuItemDescription, double Price) =>
             {

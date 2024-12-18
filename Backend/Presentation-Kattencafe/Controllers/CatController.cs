@@ -35,21 +35,24 @@ namespace Main.Controllers
             .WithOpenApi()
             .WithDescription("Gets Information of all the Cats");
 
-            group.MapGet("/{CatID}", (DatabaseContext db, int ID) =>
+            group.MapGet("/{CatID}", (DatabaseContext db, int CatID) =>
             {
                 ICatDAL catDAL = new CatDAL(db);
                 CatLogic catlogic = new CatLogic(catDAL);
                 CatModel catModel = new ();
                 CatViewModel catViewModel = new();
+                List<CatViewModel> Catlist = new ();
                 
-                catModel = catlogic.GetCatByID(ID);
+                catModel = catlogic.GetCatByID(CatID);
                 
                 catViewModel.CatID = catModel.ID;
                 catViewModel.CatName = catModel.Name;
                 catViewModel.CatDescription = catModel.Description;
                 catViewModel.CatIMG = catModel.IMG;
                 
-                return catViewModel;
+                Catlist.Add(catViewModel);
+                
+                return Catlist;
             })
             .WithName("Get Cat by ID")
             .WithOpenApi()

@@ -30,6 +30,11 @@ namespace Backend_Test
         
         }
 
+        public MenuCardModel GetMenuByID(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void AddMenuItem(string MenuItemName, string MenuItemDescription, Double MenuItemPrice)
         {
             throw new NotImplementedException();
