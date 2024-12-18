@@ -1,11 +1,9 @@
-import { createEffect, createResource, For, Show, type Component } from 'solid-js';
+import { createEffect, createResource, For, type Component } from 'solid-js';
 import Navbar from './Navbar';
-import { Flex } from '~/components/ui/flex';
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle
 } from "~/components/ui/card"

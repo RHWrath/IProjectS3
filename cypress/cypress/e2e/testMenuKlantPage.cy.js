@@ -1,5 +1,5 @@
 describe('template spec', () => {
   it('passes', () => {
-    cy.visit('https://admin.localhost/')
+    cy.visit('https://localhost/MenuPage')
   })
 })

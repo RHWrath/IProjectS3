@@ -1,13 +1,8 @@
-import { createEffect, createResource, createSignal, For, Show, type Component } from 'solid-js'
+import {createSignal, type Component } from 'solid-js'
 import Navbar from './Navbar';
 import { TextField, TextFieldInput, TextFieldLabel } from "~/components/ui/text-field"
 import { useNavigate } from "@solidjs/router"
 
-interface Cat{
-  catDescription: string;
-  catIMG: string;
-  catName: string;
-}
 
 const CreateMenuItemPage: Component = () => {
 
@@ -18,7 +13,7 @@ const CreateMenuItemPage: Component = () => {
   const navigate = useNavigate();
 
   function createMenuItem() {
-    const createCatApiCall = fetch(`https://api.localhost/MenuCard?MenuItemName=${GetItemName()}&MenuItemDescription=${GetItemDiscription()}&Price=${GetItemPrice()}`, {method: "POST"});
+    fetch(`https://api.localhost/MenuCard?MenuItemName=${GetItemName()}&MenuItemDescription=${GetItemDiscription()}&Price=${GetItemPrice()}`, {method: "POST"});
     setTimeout(() => navigate("/CatListPage"), 2000)
   }
 

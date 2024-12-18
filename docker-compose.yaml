@@ -1,0 +1,61 @@
+networks:
+  internal:
+    internal: true
+  external:
+    driver: bridge
+
+volumes:
+  Katcafe-sql-storage:
+
+services:
+  caddy:
+    image: caddy:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker.Caddyfile:/etc/caddy/Caddyfile
+    networks:
+      - external
+      - internal
+    depends_on:
+      - frontend-admin
+      - frontend-klant
+      - backend
+  frontend-admin:
+    build:
+      context: ./Frontend-Admin
+      dockerfile: Dockerfile
+    networks:
+      - internal
+  frontend-klant:
+    build:
+      context: ./Frontend-Klant
+      dockerfile: Dockerfile
+    networks:
+      - internal
+  backend:
+    build: ./Backend
+    networks:
+      - internal
+    depends_on:
+      - database
+    environment:
+      ConnectionString: |
+        Server=database;
+        Database=Katcafe;
+        User Id=sa;
+        Password=TeLangWachtwoord#1;
+        Trusted_Connection=False;
+        TrustServerCertificate=True;
+        MultipleActiveResultSets=true;
+  database:
+    image: mcr.microsoft.com/azure-sql-edge:latest
+    networks:
+      - internal
+    volumes:
+      - Katcafe-sql-storage:/var/opt/mssql
+    environment:
+      ACCEPT_EULA: 1
+      MSSQL_SA_PASSWORD: "TeLangWachtwoord#1"
+      MSSQL_PID: Developer
+      MSSQL_TELEMETRY_ENABLED: "FALSE"

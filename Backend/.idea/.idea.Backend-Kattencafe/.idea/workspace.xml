@@ -8,9 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f103854-a404-4208-999e-bbc115f2cbca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/CatController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/CatController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/MenuCardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/MenuCardController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/MenuPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/MenuPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL-Kattencafe/DatabaseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL-Kattencafe/DatabaseContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +38,7 @@
     &quot;.NET Launch Settings Profile.Presentation: http.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Dev&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -79,6 +77,7 @@
       <workItem from="1732695741095" duration="15549000" />
       <workItem from="1733214373924" duration="4323000" />
       <workItem from="1733299234796" duration="7411000" />
+      <workItem from="1733910555934" duration="1159000" />
     </task>
     <servers />
   </component>

@@ -1,20 +1,15 @@
-import { createEffect, createResource, For, Show, type Component } from 'solid-js';
+import { createEffect, createResource, For,type Component } from 'solid-js';
 import Navbar from './Navbar';
-import { Flex } from '~/components/ui/flex';
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle
 } from "~/components/ui/card"
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIcon,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuTrigger
 } from "~/components/ui/navigation-menu"
 
@@ -31,8 +26,8 @@ const MenuPage: Component = () => {
       createEffect(() => console.log(Menu()))
   
   
-  function DeleteMenuItem(Id : Number) {
-    const createCatApiCall = fetch(`https://api.localhost/MenuCard?MenuCardID=${Id}`, {method: "DELETE"});
+  function DeleteMenuItem(Id : number) {
+    fetch(`https://api.localhost/MenuCard?MenuCardID=${Id}`, {method: "DELETE"});
     setTimeout(() => location.reload(), 3000);
     
   }

@@ -16,4 +16,4 @@ Run `pnpm start` to start the app in development mode.
 
 ## Installing Components
 
-Run `pnpm npx solidui-cli@0.6.8 add text-field`
+Run `pnpm npx solidui-cli@0.6.8 add dialog`
