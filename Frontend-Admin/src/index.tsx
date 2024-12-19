@@ -9,6 +9,7 @@ import CatListPage from '../Pages/CatListPage';
 import CreateCatPage from '../Pages/CreateCatPage';
 import CreateMenuItemPage from '../Pages/CreateMenuItemPage';
 import UpdateCatPage from '../Pages/UpdateCatPage';
+import UpdateMenuItemPage from '../Pages/UpdateMenuItemPage';
 
 const root = document.getElementById('root');
 
@@ -28,6 +29,7 @@ render(
           <Route path="/CreateCatPage" component={CreateCatPage} />
           <Route path="/CreateMenuItemPage" component={CreateMenuItemPage}/>
           <Route path="/UpdateCatPage" component={UpdateCatPage}/>
+          <Route path="/UpdateMenuItemPage" component={UpdateMenuItemPage}/>
       </Router>
       
   ),

@@ -7,20 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f103854-a404-4208-999e-bbc115f2cbca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend-Test/MockMenuDAL.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend-Test/MockMenuDAL.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL-Kattencafe/MenuDAL.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL-Kattencafe/MenuDAL.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logic-Kattencafe/Interfaces/ICatDAL.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logic-Kattencafe/Interfaces/ICatDAL.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logic-Kattencafe/Interfaces/IMenuCardDAL.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logic-Kattencafe/Interfaces/IMenuCardDAL.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logic-Kattencafe/Logic/CatLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logic-Kattencafe/Logic/CatLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logic-Kattencafe/Logic/MenuCardLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logic-Kattencafe/Logic/MenuCardLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/CatController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/CatController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/MenuCardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/MenuCardController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/CatListPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/CatListPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/UpdateCatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/UpdateCatPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/src/index.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="7f103854-a404-4208-999e-bbc115f2cbca" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +88,7 @@
       <workItem from="1733214373924" duration="4323000" />
       <workItem from="1733299234796" duration="7411000" />
       <workItem from="1733910555934" duration="1159000" />
-      <workItem from="1734522816222" duration="13461000" />
+      <workItem from="1734522816222" duration="14056000" />
     </task>
     <servers />
   </component>
