@@ -59,7 +59,7 @@ const MenuPage: Component = () => {
       <NavigationMenu>
         <NavigationMenuItem>
           <NavigationMenuTrigger as="a" href="/CreateMenuItemPage">
-            Nieuwe Menu item toevoegen
+            <Button>Nieuwe Menu item toevoegen</Button>
           </NavigationMenuTrigger>
         </NavigationMenuItem>
       </NavigationMenu>

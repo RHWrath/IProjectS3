@@ -2,6 +2,7 @@ import {createSignal, type Component } from 'solid-js'
 import Navbar from './Navbar';
 import { TextField, TextFieldInput, TextFieldLabel } from "~/components/ui/text-field"
 import { useNavigate } from "@solidjs/router"
+import { Button, buttonVariants } from "~/components/ui/button"
 
 
 const CreateMenuItemPage: Component = () => {
@@ -35,7 +36,7 @@ const CreateMenuItemPage: Component = () => {
                   </TextField>
           </div>
           <div>
-            <button class="send-button" onclick={() => createMenuItem()}>toevoegen</button>
+            <Button class="send-button" onclick={() => createMenuItem()}>toevoegen</Button>
           </div>
           
       </div>

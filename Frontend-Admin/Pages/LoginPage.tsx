@@ -7,6 +7,7 @@ import { TextField, TextFieldInput, TextFieldLabel } from "~/components/ui/text-
 import { showToast, Toaster } from "~/components/ui/toast"
 import { Item } from '@kobalte/core/navigation-menu';
 import { Toast } from '@kobalte/core/*';
+import { Button, buttonVariants } from "~/components/ui/button"
 //#endregion
 
 interface Cat{
@@ -55,7 +56,7 @@ const LoginPage: Component = () => {
             </TextField>
       </div>
       <div class="flex justify-center">
-        <button class="send-button" onclick={() => Login()}>Login</button>
+        <Button class="send-button" onclick={() => Login()}>Login</Button>
         <Toaster/>
       </div>
     </div>

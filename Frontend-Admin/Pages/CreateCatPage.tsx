@@ -5,6 +5,7 @@ import "../css/CategoryCardCss.css";
 import { useNavigate } from "@solidjs/router";
 import { TextField, TextFieldInput, TextFieldLabel } from "~/components/ui/text-field"
 import { showToast, Toaster } from "~/components/ui/toast"
+import { Button, buttonVariants } from "~/components/ui/button"
 //#endregion
 
 
@@ -35,7 +36,7 @@ const CreateCatPage: Component = () => {
               </TextField>
       </div>
       <div class="flex justify-center">
-        <button class="send-button" onclick={() => createCat()}>toevoegen</button>
+        <Button class="send-button" onclick={() => createCat()}>toevoegen</Button>
       </div>
       <Toaster/>
     </div>

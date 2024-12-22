@@ -6,6 +6,7 @@ import { useNavigate } from "@solidjs/router";
 import { TextField, TextFieldInput, TextFieldLabel } from "~/components/ui/text-field"
 import { showToast, Toaster } from "~/components/ui/toast"
 import { Item } from '@kobalte/core/navigation-menu';
+import { Button, buttonVariants } from "~/components/ui/button"
 //#endregion
 
 interface Cat{
@@ -57,7 +58,7 @@ const UpdateCatPage: Component = () => {
         </For>
       </div>
       <div class="flex justify-center">
-        <button class="send-button" onclick={() => updateCat()}>Aanpassen</button>
+        <Button class="send-button" onclick={() => updateCat()}>Aanpassen</Button>
       </div>
       <Toaster/>
     </div>

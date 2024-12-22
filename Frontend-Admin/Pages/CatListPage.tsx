@@ -81,7 +81,7 @@ const CatListPage: Component = () => {
               </CardContent>
               <CardFooter>
                 <div class="">
-                      <Button onclick={() => UpdateCat(item.catID)}>Update</Button>
+                      <Button onclick={() => UpdateCat(item.catID)}>Aanpassen</Button>
                       <Dialog>
                         <DialogTrigger><Button>Delete</Button></DialogTrigger>
                         <DialogContent>
