@@ -50,7 +50,6 @@ namespace DAL
                 CatModel catModel = _dbContext.CatLists.Where(CL => CL.ID == CatID).FirstOrDefault();
                 catModel.Name = CatName;
                 catModel.Description = CatDescription;
-                catModel.IMG = CatIMG;
                 _dbContext.SaveChanges();
             }
         }

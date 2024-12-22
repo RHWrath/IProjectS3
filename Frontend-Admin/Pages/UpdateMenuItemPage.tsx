@@ -36,7 +36,7 @@ const UpdateMenuItemPage: Component = () => {
     fetch(`https://api.localhost/MenuCard/${MenuItemID}?MenuItemName=${GetMenuName()}&MenuItemDescription=${GetMenuDiscription()}&Price=${GetMenuPrice()}`,
     {method: "PUT"} );
     showToast({title: "Menu item aangepast", description: "item is aangepast je wordt terug gestuurd"})
-    localStorage.clear();
+    localStorage.removeItem("MenuItemID");
     setTimeout(() => navigate("/MenuPage"), 2000)
   }
 

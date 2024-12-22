@@ -10,6 +10,7 @@ import CreateCatPage from '../Pages/CreateCatPage';
 import CreateMenuItemPage from '../Pages/CreateMenuItemPage';
 import UpdateCatPage from '../Pages/UpdateCatPage';
 import UpdateMenuItemPage from '../Pages/UpdateMenuItemPage';
+import LoginPage from '../Pages/LoginPage';
 
 const root = document.getElementById('root');
 
@@ -22,7 +23,7 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 render(
   () => (
       <Router>
-          <Route path="/" component={Homepage} />
+          <Route path="/" component={LoginPage} />
           <Route path="/Homepage" component={Homepage} />
           <Route path="/MenuPage" component={Menupage} />
           <Route path="/CatListPage" component={CatListPage} />

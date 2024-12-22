@@ -7,7 +7,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f103854-a404-4208-999e-bbc115f2cbca" name="Changes" comment="" />
+    <list default="true" id="7f103854-a404-4208-999e-bbc115f2cbca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DAL-Kattencafe/LoginDAL.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic-Kattencafe/Interfaces/ILoginDAL.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic-Kattencafe/Logic/LoginLogic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic-Kattencafe/Models/UserAcountModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/LoginController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL-Kattencafe/CatDAL.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL-Kattencafe/CatDAL.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL-Kattencafe/DatabaseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL-Kattencafe/DatabaseContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL-Kattencafe/Migrations/DatabaseContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL-Kattencafe/Migrations/DatabaseContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/CatListPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/CatListPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/UpdateCatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/UpdateCatPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/UpdateMenuItemPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/UpdateMenuItemPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/src/index.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,16 +35,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Controllers/CatController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Controllers/CatController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Controllers/CatController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Controllers/CatController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Controllers/CatController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Controllers/CatController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Controllers/CatController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3bd4df5aff92cabbc4d630be64227073db1b8539b3a1e47786b4b189d7cdb7/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -39,25 +45,28 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2pMKuIls37yMXS61JgAWsnuBO0T" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Presentation: http.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Dev",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Presentation: http.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Dev&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Presentation: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Presentation-Kattencafe/Presentation.csproj" />
@@ -89,6 +98,8 @@
       <workItem from="1733299234796" duration="7411000" />
       <workItem from="1733910555934" duration="1159000" />
       <workItem from="1734522816222" duration="14056000" />
+      <workItem from="1734682382035" duration="7421000" />
+      <workItem from="1734883409865" duration="674000" />
     </task>
     <servers />
   </component>

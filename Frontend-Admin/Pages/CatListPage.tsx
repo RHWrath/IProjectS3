@@ -44,7 +44,7 @@ const CatListPage: Component = () => {
 
   function DeleteCat(Id : number) {
     fetch(`https://api.localhost/Cats/${Id}`, {method: "DELETE"});
-    //setTimeout(() => location.reload(), 400);    
+    setTimeout(() => location.reload(), 400);    
   }
 
   function UpdateCat(Id : number) {
@@ -59,7 +59,7 @@ const CatListPage: Component = () => {
       <NavigationMenu>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger as="a" href="/CreateCatPage">
-                    Nieuwe Kat toevoegen
+                    <Button>Nieuwe Kat toevoegen</Button>
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
        </NavigationMenu>
@@ -81,6 +81,7 @@ const CatListPage: Component = () => {
               </CardContent>
               <CardFooter>
                 <div class="">
+                      <Button onclick={() => UpdateCat(item.catID)}>Update</Button>
                       <Dialog>
                         <DialogTrigger><Button>Delete</Button></DialogTrigger>
                         <DialogContent>
@@ -88,12 +89,10 @@ const CatListPage: Component = () => {
                             <DialogTitle>Weet je zeker dat je deze wilt verwijderen?</DialogTitle>
                           </DialogHeader>
                           <DialogFooter>
-                            <Button onclick={() => DeleteCat(item.catID)}>Delete</Button>
+                            <Button onclick={() => DeleteCat(item.catID)}>Confirm</Button>
                           </DialogFooter>
                         </DialogContent>
-                      </Dialog>
-                      <Button onclick={() => UpdateCat(item.catID)}>Update</Button>
-
+                      </Dialog>                    
                   </div>
               </CardFooter>
             </Card>

@@ -34,5 +34,6 @@ app.UseHttpsRedirection();
 
 app.MapGroup("/Cats").SetupCats().WithTags("Cats");
 app.MapGroup("/MenuCard").SetupMenuCard().WithTags("MenuCard");
+app.MapGroup("/Login").SetupLogin().WithTags("Login");
 
 app.Run();

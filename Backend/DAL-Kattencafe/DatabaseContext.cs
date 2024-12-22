@@ -7,6 +7,7 @@ namespace DAL
     {
         public DbSet<CatModel> CatLists { get; set; }
         public DbSet<MenuCardModel> MenuCards { get; set; }
+        public DbSet<UserAcountModel> UserAcounts { get; set; }
 
         private const string connection = $"Server=mssqlstud.fhict.local;Database=dbi514798_ips3;user id=dbi514798_ips3;password=SWW#1;TrustServerCertificate=True;";
 

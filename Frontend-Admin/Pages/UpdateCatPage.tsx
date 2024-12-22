@@ -35,7 +35,7 @@ const UpdateCatPage: Component = () => {
     fetch(`https://api.localhost/Cats/${CatID}?CatName=${GetCatName()}&CatDescription=${GetCatDiscription()}`,
     {method: "PUT"} );
     showToast({title: "kat aangepast", description: "kat is aangepast je wordt terug gestuurd"})
-    localStorage.clear();
+    localStorage.removeItem("CatID");
     setTimeout(() => navigate("/CatListPage"), 2000)
   }
 

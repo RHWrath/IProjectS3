@@ -7,7 +7,9 @@ import {
 } from "~/components/ui/navigation-menu"
 
 const Navbar: Component = () => {
-  return (
+  const LoginValidation = sessionStorage.getItem("LoginSuccesfull")
+  
+  return (      
       <NavigationMenu>
         <NavigationMenuItem>
           <NavigationMenuTrigger as="a" href="/HomePage">
