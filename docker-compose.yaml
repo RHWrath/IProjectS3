@@ -59,3 +59,7 @@ services:
       MSSQL_SA_PASSWORD: "TeLangWachtwoord#1"
       MSSQL_PID: Developer
       MSSQL_TELEMETRY_ENABLED: "FALSE"
+  services:
+    webapp:
+      environment:
+       - ASPNETCORE_ENVIRONMENT=Production

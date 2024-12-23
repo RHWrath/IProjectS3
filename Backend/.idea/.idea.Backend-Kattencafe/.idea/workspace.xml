@@ -8,20 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f103854-a404-4208-999e-bbc115f2cbca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DAL-Kattencafe/LoginDAL.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logic-Kattencafe/Interfaces/ILoginDAL.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logic-Kattencafe/Logic/LoginLogic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logic-Kattencafe/Models/UserAcountModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/LoginController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL-Kattencafe/CatDAL.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL-Kattencafe/CatDAL.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DAL-Kattencafe/DatabaseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL-Kattencafe/DatabaseContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL-Kattencafe/Migrations/DatabaseContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL-Kattencafe/Migrations/DatabaseContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/CatListPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/CatListPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/UpdateCatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/UpdateCatPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/UpdateMenuItemPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/UpdateMenuItemPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +91,7 @@
       <workItem from="1734522816222" duration="14056000" />
       <workItem from="1734682382035" duration="7421000" />
       <workItem from="1734883409865" duration="674000" />
+      <workItem from="1734956236208" duration="5244000" />
     </task>
     <servers />
   </component>
