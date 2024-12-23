@@ -8,11 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f103854-a404-4208-999e-bbc115f2cbca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend-Kattencafe.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Backend-Kattencafe.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DAL-Kattencafe/DatabaseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL-Kattencafe/DatabaseContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../start.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +28,23 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3bd4df5aff92cabbc4d630be64227073db1b8539b3a1e47786b4b189d7cdb7/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b8c1c57742337e59591581af3eb2c647e9ed52d2951655fd74b1facf3ff520/ConfigurationExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/DAL-Kattencafe/DatabaseContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/DAL-Kattencafe/DatabaseContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/DAL-Kattencafe/DatabaseContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/DAL-Kattencafe/DatabaseContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/DAL-Kattencafe/DatabaseContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/DAL-Kattencafe/DatabaseContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -91,7 +109,7 @@
       <workItem from="1734522816222" duration="14056000" />
       <workItem from="1734682382035" duration="7421000" />
       <workItem from="1734883409865" duration="674000" />
-      <workItem from="1734956236208" duration="5244000" />
+      <workItem from="1734956236208" duration="10948000" />
     </task>
     <servers />
   </component>

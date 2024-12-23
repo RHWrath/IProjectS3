@@ -19,18 +19,13 @@ builder.Services.AddCors(policyBuilder =>
         policy.WithOrigins("*").AllowAnyHeader().AllowAnyMethod())
 );
 
-var environment = builder.Environment.EnvironmentName;
-var connectionString = environment switch
-{
-    "Development" => builder.Configuration.GetConnectionString("DevelopmentDB"),
-    "Production" => builder.Configuration.GetConnectionString("ProductionDB"),
-    _ => throw new Exception($"Environment {environment} is not supported.")
-};
 
-Console.WriteLine("GET FUCKED");
 
-//builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connectionString));
+
+Console.WriteLine();
+
 builder.Services.AddDbContext<DatabaseContext>();
+//builder.Services.AddDbContext<DatabaseContext>();
 
 var app = builder.Build();
 
