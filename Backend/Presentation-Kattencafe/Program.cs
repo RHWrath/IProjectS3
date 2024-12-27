@@ -25,7 +25,6 @@ builder.Services.AddCors(policyBuilder =>
 Console.WriteLine();
 
 builder.Services.AddDbContext<DatabaseContext>();
-//builder.Services.AddDbContext<DatabaseContext>();
 
 var app = builder.Build();
 

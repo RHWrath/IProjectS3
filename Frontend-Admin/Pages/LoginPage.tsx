@@ -1,12 +1,9 @@
 //#region Imports
 import {createSignal,createEffect, createResource, type Component, For } from 'solid-js';
-import Navbar from './Navbar';
 import "../css/CategoryCardCss.css";
 import { useNavigate } from "@solidjs/router";
 import { TextField, TextFieldInput, TextFieldLabel } from "~/components/ui/text-field"
 import { showToast, Toaster } from "~/components/ui/toast"
-import { Item } from '@kobalte/core/navigation-menu';
-import { Toast } from '@kobalte/core/*';
 import { Button, buttonVariants } from "~/components/ui/button"
 //#endregion
 
@@ -33,7 +30,8 @@ const LoginPage: Component = () => {
         console.log(response.status)
         if (response.ok) 
         {
-            sessionStorage.setItem("LoginSuccesfull", "true");
+            sessionStorage.setItem("LoginName", GetUsername());
+            sessionStorage.setItem("LoginPassword", GetPassword());
             showToast({title: "Succes:", description: "welcome"})            
             setTimeout(() => navigate("/Homepage"), 400)
         } else 

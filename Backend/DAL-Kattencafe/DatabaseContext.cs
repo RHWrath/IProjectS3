@@ -22,14 +22,14 @@ namespace DAL
             
              Console.WriteLine($"environment:" + environment);
              
-             if (environment == "Development")
+             if (environment == "Production")
              {
-                 connectionString = _configuration.GetConnectionString("DevelopmentDB");
+                 connectionString = _configuration.GetConnectionString("ProductionDB");
              }
              else
              {
-                 Console.WriteLine("Using Server");
-                 connectionString = _configuration.GetConnectionString("ProductionDB");
+                 Console.WriteLine("Using DEV");
+                 connectionString = _configuration.GetConnectionString("DevelopmentDB");
              }
              
              options.UseSqlServer(connectionString);
