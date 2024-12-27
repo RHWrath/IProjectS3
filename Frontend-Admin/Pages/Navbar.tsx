@@ -21,7 +21,7 @@ const Navbar: Component = () => {
         fetch(`https://api.localhost/Login?username=${LoginName}&password=${LoginPassword}`,
         {method: "POST"} ).then((response)=>{
             console.log(response.status)
-            if (response.status == 500) 
+            if (response.status == 500 || response.status == 404) 
             {           
                  setTimeout(() => navigate("/"), 400)
             } 
