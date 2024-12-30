@@ -1,6 +1,7 @@
 using Main;
 using Main.Controllers;
 using DAL;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -19,10 +20,15 @@ builder.Services.AddCors(policyBuilder =>
         policy.WithOrigins("*").AllowAnyHeader().AllowAnyMethod())
 );
 
+builder.Services.AddRateLimiter(options =>
+{
+    options.AddFixedWindowLimiter("Policy", limiterOptions =>
+    {
+        limiterOptions.PermitLimit = 100;
+        limiterOptions.Window = TimeSpan.FromMinutes(1);
+    });
+});
 
-
-
-Console.WriteLine();
 
 builder.Services.AddDbContext<DatabaseContext>();
 
@@ -38,7 +44,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseRateLimiter();
 
 app.MapGroup("/Cats").SetupCats().WithTags("Cats");
 app.MapGroup("/MenuCard").SetupMenuCard().WithTags("MenuCard");

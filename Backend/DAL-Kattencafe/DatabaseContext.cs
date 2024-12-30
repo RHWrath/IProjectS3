@@ -20,7 +20,7 @@ namespace DAL
              string environment = Environment.GetEnvironmentVariable("DatabaseConnection");
              string connectionString = "empty";
             
-             Console.WriteLine($"environment:" + environment);
+             //Console.WriteLine($"environment:" + environment);
              
              if (environment == "Production")
              {
@@ -28,7 +28,7 @@ namespace DAL
              }
              else
              {
-                 Console.WriteLine("Using DEV");
+                 //Console.WriteLine("Using DEV");
                  connectionString = _configuration.GetConnectionString("DevelopmentDB");
              }
              

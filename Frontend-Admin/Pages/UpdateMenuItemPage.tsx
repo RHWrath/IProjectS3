@@ -22,8 +22,8 @@ const UpdateMenuItemPage: Component = () => {
 
   const [GetMenuName, setMenuName] = createSignal("")
   const [GetMenuDiscription, setMenuDiscription] = createSignal("")
-  const [GetMenuPrice, setMenuPrice] = createSignal("")
-  
+  const [GetMenuPrice, setMenuPrice] = createSignal("")  
+  let LastRequestTime =0;  
   const navigate = useNavigate();
   const MenuItemID = Number(localStorage.getItem("MenuItemID"))
   
@@ -33,6 +33,14 @@ const UpdateMenuItemPage: Component = () => {
     console.log("item naam",GetMenuName())
     console.log("item description",GetMenuName())
     console.log("item ID",MenuItemID)
+    const now = Date.now();
+
+    if (now - LastRequestTime < 1000) 
+    {
+      console.warn("Rate limit exceeded");
+      return;
+    }
+    LastRequestTime = now;
 
     fetch(`https://api.localhost/MenuCard/${MenuItemID}?MenuItemName=${GetMenuName()}&MenuItemDescription=${GetMenuDiscription()}&Price=${GetMenuPrice()}`,
     {method: "PUT"} );

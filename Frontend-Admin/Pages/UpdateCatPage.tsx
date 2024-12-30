@@ -25,6 +25,7 @@ const UpdateCatPage: Component = () => {
   
   const navigate = useNavigate();
   const CatID = Number(localStorage.getItem("CatID"))
+  let LastRequestTime =0;
   
   const [cat] = createResource<Cat[] | undefined>(() => fetch(`https://api.localhost/Cats/${CatID}`).then(body=>body.json()))
 
@@ -32,6 +33,14 @@ const UpdateCatPage: Component = () => {
     console.log("kat naam",GetCatName())
     console.log("kat description",GetCatName())
     console.log("kat ID",CatID)
+    const now = Date.now();
+
+    if (now - LastRequestTime < 1000) 
+    {
+      console.warn("Rate limit exceeded");
+      return;
+    }
+    LastRequestTime = now;
 
     fetch(`https://api.localhost/Cats/${CatID}?CatName=${GetCatName()}&CatDescription=${GetCatDiscription()}`,
     {method: "PUT"} );

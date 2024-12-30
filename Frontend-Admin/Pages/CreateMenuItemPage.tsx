@@ -9,11 +9,21 @@ const CreateMenuItemPage: Component = () => {
 
   const [GetItemName, setItemName] = createSignal("")
   const [GetItemDiscription, setItemDiscription] = createSignal("")
-  const [GetItemPrice, setItemPrice] = createSignal("")
+  const [GetItemPrice, setItemPrice] = createSignal("")   
+  let LastRequestTime =0;  
 
   const navigate = useNavigate();
 
   function createMenuItem() {
+    const now = Date.now();
+
+    if (now - LastRequestTime < 1000) 
+    {
+      console.warn("Rate limit exceeded");
+      return;
+    }
+    LastRequestTime = now;
+
     fetch(`https://api.localhost/MenuCard?MenuItemName=${GetItemName()}&MenuItemDescription=${GetItemDiscription()}&Price=${GetItemPrice()}`, {method: "POST"});
     setTimeout(() => navigate("/CatListPage"), 2000)
   }

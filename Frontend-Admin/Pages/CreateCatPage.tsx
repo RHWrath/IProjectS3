@@ -12,11 +12,22 @@ import { Button, buttonVariants } from "~/components/ui/button"
 const CreateCatPage: Component = () => {
 
   const [GetCatName, setCatName] = createSignal("")
-  const [GetCatDiscription, setCatDiscription] = createSignal("")
+  const [GetCatDiscription, setCatDiscription] = createSignal("")  
+  let LastRequestTime =0;  
   
   const navigate = useNavigate();
 
   function createCat() {
+    const now = Date.now();
+
+    if (now - LastRequestTime < 1000) 
+    {
+      console.warn("Rate limit exceeded");
+      return;
+    }
+    LastRequestTime = now;
+
+
     fetch(`https://api.localhost/Cats?CatName=${GetCatName()}&CatDescription=${GetCatDiscription()}`, {method: "POST"});
     showToast({title: "kat gemaakt", description: "kat is aangemaakt je wordt terug gestuurd"})
     setTimeout(() => navigate("/CatListPage"), 2000)
