@@ -33,6 +33,9 @@ const UpdateMenuItemPage: Component = () => {
     console.log("item naam",GetMenuName())
     console.log("item description",GetMenuName())
     console.log("item ID",MenuItemID)
+
+    const MenuName = GetMenuName();
+    const MenuDescription = GetMenuDiscription();
     const now = Date.now();
 
     if (now - LastRequestTime < 1000) 
@@ -41,6 +44,18 @@ const UpdateMenuItemPage: Component = () => {
       return;
     }
     LastRequestTime = now;
+
+    if (! /^[A-Za-z0-9]+$/.test(MenuName)) 
+      {
+        showToast({title: "Error", description: "menu naam ongeldig"})
+        return
+      }
+  
+    if (! /^[A-Za-z0-9 .]+$/.test(MenuDescription)) 
+       {
+        showToast({title: "Error", description: "menu description ongeldig"})
+        return
+       }
 
     fetch(`https://api.localhost/MenuCard/${MenuItemID}?MenuItemName=${GetMenuName()}&MenuItemDescription=${GetMenuDiscription()}&Price=${GetMenuPrice()}`,
     {method: "PUT"} );

@@ -3,6 +3,7 @@ using DAL;
 using Logic.Models;
 using Logic.Interfaces;
 using Logic;
+using System.Text.RegularExpressions;
 
 namespace Main.Controllers
 {
@@ -59,6 +60,10 @@ namespace Main.Controllers
             group.MapPost("/",
                     (DatabaseContext db,string MenuItemName, string MenuItemDescription, double Price) =>
             {
+                if (string.IsNullOrWhiteSpace(MenuItemName) || string.IsNullOrWhiteSpace(MenuItemDescription) || double.IsNegative(Price) ||
+                    !Regex.IsMatch(MenuItemName, "/^[A-Za-z0-9 ]+$/")
+                    || !Regex.IsMatch(MenuItemDescription, "/^[A-Za-z0-9 ]+$/"))
+                { return Results.BadRequest();}
                 IMenuCardDAL MenuDAL = new MenuDAL(db);
                 MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
                 menuCardLogic.AddMenuItem(MenuItemName, MenuItemDescription, Price);
@@ -71,6 +76,10 @@ namespace Main.Controllers
             group.MapPut("/{MenuCardID}",
                 (DatabaseContext db, string MenuItemName, string MenuItemDescription, double Price, int MenuCardId) =>
             {
+                if (string.IsNullOrWhiteSpace(MenuItemName) || string.IsNullOrWhiteSpace(MenuItemDescription) || double.IsNegative(Price) ||
+                    !Regex.IsMatch(MenuItemName, "/^[A-Za-z0-9 ]+$/")
+                    || !Regex.IsMatch(MenuItemDescription, "/^[A-Za-z0-9 ]+$/"))
+                { return Results.BadRequest();}
                 IMenuCardDAL MenuDAL = new MenuDAL(db);
                 MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
                 menuCardLogic.UpdateMenuItem(MenuItemName, MenuItemDescription, Price, MenuCardId);

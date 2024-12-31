@@ -1,8 +1,10 @@
-﻿using Main.ViewModels;
+﻿using System.Text.RegularExpressions;
+using Main.ViewModels;
 using DAL;
 using Logic.Models;
 using Logic.Interfaces;
 using Logic;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace Main.Controllers
 {
@@ -59,8 +61,13 @@ namespace Main.Controllers
             .WithDescription("Gets Information of a cat by ID");
             
             group.MapPost("/", 
-                (DatabaseContext db, string CatName, String CatDescription, string? CatIMG) => 
-            {
+                (DatabaseContext db, string CatName, String CatDescription, string? CatIMG) =>
+                {
+                    if (string.IsNullOrWhiteSpace(CatName) || string.IsNullOrWhiteSpace(CatDescription) ||
+                        !Regex.IsMatch(CatName, "/^[A-Za-z0-9 ]+$/")
+                        || !Regex.IsMatch(CatDescription, "/^[A-Za-z0-9 ]+$/"))
+                    { return Results.BadRequest();}
+                    
                 ICatDAL catDAL = new CatDAL(db);
                 CatLogic catlogic = new CatLogic(catDAL);
                 catlogic.AddCat(CatName, CatDescription, CatIMG);
@@ -73,6 +80,11 @@ namespace Main.Controllers
             group.MapPut("/{CatID}",
                 (DatabaseContext db, string CatName, String CatDescription, string? CatIMG, int CatID) =>
                     {
+                        if (string.IsNullOrWhiteSpace(CatName) || string.IsNullOrWhiteSpace(CatDescription) ||
+                            !Regex.IsMatch(CatName, "/^[A-Za-z0-9 ]+$/")
+                            || !Regex.IsMatch(CatDescription, "/^[A-Za-z0-9 ]+$/"))
+                        { return Results.BadRequest();}
+                        
                         ICatDAL catDAL = new CatDAL(db);
                         CatLogic catlogic = new CatLogic(catDAL);
                         catlogic.UpdateCat(CatName, CatDescription, CatIMG, CatID);

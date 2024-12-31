@@ -19,6 +19,8 @@ const CreateCatPage: Component = () => {
 
   function createCat() {
     const now = Date.now();
+    const CatName = GetCatName();
+    const CatDescription = GetCatDiscription();
 
     if (now - LastRequestTime < 1000) 
     {
@@ -27,6 +29,17 @@ const CreateCatPage: Component = () => {
     }
     LastRequestTime = now;
 
+    if (! /^[A-Za-z0-9]+$/.test(CatName)) 
+      {
+        showToast({title: "Error", description: "kat naam ongeldig"})
+        return
+      }
+  
+      if (! /^[A-Za-z0-9 .]+$/.test(CatDescription)) 
+      {
+        showToast({title: "Error", description: "kat description ongeldig"})
+        return
+      }
 
     fetch(`https://api.localhost/Cats?CatName=${GetCatName()}&CatDescription=${GetCatDiscription()}`, {method: "POST"});
     showToast({title: "kat gemaakt", description: "kat is aangemaakt je wordt terug gestuurd"})

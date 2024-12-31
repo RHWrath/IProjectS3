@@ -33,6 +33,9 @@ const UpdateCatPage: Component = () => {
     console.log("kat naam",GetCatName())
     console.log("kat description",GetCatName())
     console.log("kat ID",CatID)
+
+    const CatName = GetCatName();
+    const CatDescription = GetCatDiscription();
     const now = Date.now();
 
     if (now - LastRequestTime < 1000) 
@@ -42,11 +45,23 @@ const UpdateCatPage: Component = () => {
     }
     LastRequestTime = now;
 
+    if (! /^[A-Za-z0-9]+$/.test(CatName)) 
+    {
+      showToast({title: "Error", description: "kat naam ongeldig"})
+      return
+    }
+
+    if (! /^[A-Za-z0-9 .]+$/.test(CatDescription)) 
+    {
+      showToast({title: "Error", description: "kat description ongeldig"})
+      return
+    }
+
     fetch(`https://api.localhost/Cats/${CatID}?CatName=${GetCatName()}&CatDescription=${GetCatDiscription()}`,
     {method: "PUT"} );
     showToast({title: "kat aangepast", description: "kat is aangepast je wordt terug gestuurd"})
     localStorage.removeItem("CatID");
-    setTimeout(() => navigate("/CatListPage"), 2000)
+    setTimeout(() => navigate("/CatListPage"), 400)
   }
 
   return (
