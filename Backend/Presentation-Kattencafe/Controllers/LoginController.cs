@@ -1,9 +1,9 @@
-using Main.ViewModels;
+
 using DAL;
-using Logic.Models;
 using Logic.Interfaces;
 using Logic;
 
+// ReSharper disable once CheckNamespace
 namespace Main.Controllers
 {
     public static class LoginController

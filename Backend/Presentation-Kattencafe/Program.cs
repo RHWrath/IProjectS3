@@ -1,9 +1,7 @@
-using Main;
+
 using Main.Controllers;
 using DAL;
 using Microsoft.AspNetCore.RateLimiting;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 

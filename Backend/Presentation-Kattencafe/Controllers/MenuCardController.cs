@@ -5,6 +5,7 @@ using Logic.Interfaces;
 using Logic;
 using System.Text.RegularExpressions;
 
+// ReSharper disable once CheckNamespace
 namespace Main.Controllers
 {
     public static class MenuCardController
