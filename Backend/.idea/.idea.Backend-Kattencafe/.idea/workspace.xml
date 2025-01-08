@@ -9,10 +9,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7f103854-a404-4208-999e-bbc115f2cbca" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend-Kattencafe.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Backend-Kattencafe.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/CatController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/CatController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/MenuCardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/MenuCardController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/CreateCatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/CreateCatPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/CreateMenuItemPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/CreateMenuItemPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/LoginPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/Navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/UpdateCatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/UpdateCatPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/UpdateMenuItemPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/UpdateMenuItemPage.tsx" afterDir="false" />
     </list>
@@ -28,24 +31,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2d3fad7b7f175e73a9ee6623bad266309c5cb8780c91159bdb98d469c8854/RateLimiterApplicationBuilderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3bd4df5aff92cabbc4d630be64227073db1b8539b3a1e47786b4b189d7cdb7/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b8c1c57742337e59591581af3eb2c647e9ed52d2951655fd74b1facf3ff520/ConfigurationExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/DAL-Kattencafe/DatabaseContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/DAL-Kattencafe/DatabaseContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/DAL-Kattencafe/DatabaseContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/DAL-Kattencafe/DatabaseContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/DAL-Kattencafe/DatabaseContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/DAL-Kattencafe/DatabaseContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rik Heerholtz/Desktop/Fonty's/S3/Individueel project/IProjectS3/Backend/Presentation-Kattencafe/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f8c7eb7ea1edec4e19324d5ffa81a4a6eb62d142b0aae0598f9aa7773ec68f6b/RequestDelegateFactory.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -62,21 +51,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.Presentation: http.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Dev&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.Presentation: http.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Dev",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Presentation: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Presentation-Kattencafe/Presentation.csproj" />
@@ -114,6 +103,8 @@
       <workItem from="1735296948223" duration="396000" />
       <workItem from="1735562533094" duration="1393000" />
       <workItem from="1735651541086" duration="626000" />
+      <workItem from="1736327453166" duration="339000" />
+      <workItem from="1736329577894" duration="2154000" />
     </task>
     <servers />
   </component>

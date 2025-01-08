@@ -30,8 +30,8 @@ const LoginPage: Component = () => {
         console.log(response.status)
         if (response.ok) 
         {
-            sessionStorage.setItem("LoginName", GetUsername());
-            sessionStorage.setItem("LoginPassword", GetPassword());
+            sessionStorage.LoggedIn = true;
+            sessionStorage.setItem("LoggedIn", "true");
             showToast({title: "Succes:", description: "welcome"})            
             setTimeout(() => navigate("/Homepage"), 400)
         } else 

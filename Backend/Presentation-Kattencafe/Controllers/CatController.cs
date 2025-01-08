@@ -63,10 +63,14 @@ namespace Main.Controllers
             group.MapPost("/", 
                 (DatabaseContext db, string CatName, String CatDescription, string? CatIMG) =>
                 {
-                    if (string.IsNullOrWhiteSpace(CatName) || string.IsNullOrWhiteSpace(CatDescription) ||
-                        !Regex.IsMatch(CatName, "/^[A-Za-z0-9 ]+$/")
-                        || !Regex.IsMatch(CatDescription, "/^[A-Za-z0-9 ]+$/"))
-                    { return Results.BadRequest();}
+                    Regex regex = new Regex("^[A-Za-z0-9 .]+$");
+                    if (string.IsNullOrWhiteSpace(CatName) || string.IsNullOrWhiteSpace(CatDescription))
+                    {
+                        return Results.BadRequest("Naam & Description is Vereist");
+                    }
+                    if (!regex.IsMatch(CatName)) { return Results.BadRequest("Naam is fout");}
+                    
+                    if (!regex.IsMatch(CatDescription)) { return Results.BadRequest("Description is fout");}
                     
                 ICatDAL catDAL = new CatDAL(db);
                 CatLogic catlogic = new CatLogic(catDAL);
@@ -80,10 +84,14 @@ namespace Main.Controllers
             group.MapPut("/{CatID}",
                 (DatabaseContext db, string CatName, String CatDescription, string? CatIMG, int CatID) =>
                     {
-                        if (string.IsNullOrWhiteSpace(CatName) || string.IsNullOrWhiteSpace(CatDescription) ||
-                            !Regex.IsMatch(CatName, "/^[A-Za-z0-9 ]+$/")
-                            || !Regex.IsMatch(CatDescription, "/^[A-Za-z0-9 ]+$/"))
-                        { return Results.BadRequest();}
+                        Regex regex = new Regex("^[A-Za-z0-9 .]+$");
+                        if (string.IsNullOrWhiteSpace(CatName) || string.IsNullOrWhiteSpace(CatDescription))
+                        {
+                            return Results.BadRequest("Naam & Description is Vereist");
+                        }
+                        if (!regex.IsMatch(CatName)) { return Results.BadRequest("Naam is fout");}
+                    
+                        if (!regex.IsMatch(CatDescription)) { return Results.BadRequest("Description is fout");}
                         
                         ICatDAL catDAL = new CatDAL(db);
                         CatLogic catlogic = new CatLogic(catDAL);

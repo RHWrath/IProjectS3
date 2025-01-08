@@ -60,10 +60,15 @@ namespace Main.Controllers
             group.MapPost("/",
                     (DatabaseContext db,string MenuItemName, string MenuItemDescription, double Price) =>
             {
-                if (string.IsNullOrWhiteSpace(MenuItemName) || string.IsNullOrWhiteSpace(MenuItemDescription) || double.IsNegative(Price) ||
-                    !Regex.IsMatch(MenuItemName, "/^[A-Za-z0-9 ]+$/")
-                    || !Regex.IsMatch(MenuItemDescription, "/^[A-Za-z0-9 ]+$/"))
-                { return Results.BadRequest();}
+                Regex regex = new Regex("^[A-Za-z0-9 .]+$");
+                if (string.IsNullOrWhiteSpace(MenuItemName) || string.IsNullOrWhiteSpace(MenuItemDescription))
+                {
+                    return Results.BadRequest();
+                }
+                if (!regex.IsMatch(MenuItemName)) { return Results.BadRequest();}
+                    
+                if (!regex.IsMatch(MenuItemDescription)) { return Results.BadRequest();}
+                
                 IMenuCardDAL MenuDAL = new MenuDAL(db);
                 MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
                 menuCardLogic.AddMenuItem(MenuItemName, MenuItemDescription, Price);
@@ -76,10 +81,15 @@ namespace Main.Controllers
             group.MapPut("/{MenuCardID}",
                 (DatabaseContext db, string MenuItemName, string MenuItemDescription, double Price, int MenuCardId) =>
             {
-                if (string.IsNullOrWhiteSpace(MenuItemName) || string.IsNullOrWhiteSpace(MenuItemDescription) || double.IsNegative(Price) ||
-                    !Regex.IsMatch(MenuItemName, "/^[A-Za-z0-9 ]+$/")
-                    || !Regex.IsMatch(MenuItemDescription, "/^[A-Za-z0-9 ]+$/"))
-                { return Results.BadRequest();}
+                Regex regex = new Regex("^[A-Za-z0-9 .]+$");
+                if (string.IsNullOrWhiteSpace(MenuItemName) || string.IsNullOrWhiteSpace(MenuItemDescription))
+                {
+                    return Results.BadRequest("Naam & Description is Vereist");
+                }
+                if (!regex.IsMatch(MenuItemName)) { return Results.BadRequest("Naam is fout");}
+                    
+                if (!regex.IsMatch(MenuItemDescription)) { return Results.BadRequest("Description is fout");}
+                
                 IMenuCardDAL MenuDAL = new MenuDAL(db);
                 MenuCardLogic menuCardLogic = new MenuCardLogic(MenuDAL);
                 menuCardLogic.UpdateMenuItem(MenuItemName, MenuItemDescription, Price, MenuCardId);

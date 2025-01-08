@@ -45,7 +45,7 @@ const UpdateMenuItemPage: Component = () => {
     }
     LastRequestTime = now;
 
-    if (! /^[A-Za-z0-9]+$/.test(MenuName)) 
+    if (! /^[A-Za-z0-9 .]+$/.test(MenuName)) 
       {
         showToast({title: "Error", description: "menu naam ongeldig"})
         return

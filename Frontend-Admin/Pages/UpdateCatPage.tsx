@@ -45,7 +45,7 @@ const UpdateCatPage: Component = () => {
     }
     LastRequestTime = now;
 
-    if (! /^[A-Za-z0-9]+$/.test(CatName)) 
+    if (! /^[A-Za-z0-9 .]+$/.test(CatName)) 
     {
       showToast({title: "Error", description: "kat naam ongeldig"})
       return

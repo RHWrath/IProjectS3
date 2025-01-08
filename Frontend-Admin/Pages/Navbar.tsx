@@ -1,9 +1,7 @@
-import {createSignal,createEffect, createResource, type Component, For } from 'solid-js';
+import {createEffect,  type Component, For } from 'solid-js';
 import "../css/CategoryCardCss.css";
 import { useNavigate } from "@solidjs/router";
-import { TextField, TextFieldInput, TextFieldLabel } from "~/components/ui/text-field"
-import { showToast, Toaster } from "~/components/ui/toast"
-import { Button, buttonVariants } from "~/components/ui/button"
+import { Button} from "~/components/ui/button"
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -13,25 +11,16 @@ import {
 const Navbar: Component = () => {
   
       const navigate = useNavigate();
-      const LoginName = sessionStorage.getItem("LoginName")
-      const LoginPassword = sessionStorage.getItem("LoginPassword")
+      const Loggedin = Boolean(sessionStorage.getItem("LoggedIn"));
 
       function LoginValidation() 
-      {
-        fetch(`https://api.localhost/Login?username=${LoginName}&password=${LoginPassword}`,
-        {method: "POST"} ).then((response)=>{
-            console.log(response.status)
-            if (response.status == 500 || response.status == 404) 
-            {           
-                 setTimeout(() => navigate("/"), 400)
-            } 
-        });
-      }
+      {  if (Loggedin != true) {   navigate("/");   }    }
 
       function Logout() 
       {
         sessionStorage.clear
         localStorage.clear
+        navigate("/")
       }
   
       createEffect(() => {
@@ -43,19 +32,19 @@ const Navbar: Component = () => {
         <NavigationMenu>
         <NavigationMenuItem>
           <NavigationMenuTrigger as="a" href="/HomePage">
-          <Button onclick={() => Logout()} variant="ghost">Home</Button>
+          <Button variant="ghost">Home</Button>
           </NavigationMenuTrigger>
         </NavigationMenuItem>  
         
         <NavigationMenuItem>
           <NavigationMenuTrigger as="a" href="/MenuPage">
-          <Button onclick={() => Logout()} variant="ghost">Het Menu</Button>
+          <Button variant="ghost">Het Menu</Button>
           </NavigationMenuTrigger>
         </NavigationMenuItem>
         
         <NavigationMenuItem>
           <NavigationMenuTrigger as="a" href="/CatListPage">
-          <Button onclick={() => Logout()} variant="ghost">De Katten</Button>
+          <Button variant="ghost">De Katten</Button>
           </NavigationMenuTrigger>
         </NavigationMenuItem>
 
