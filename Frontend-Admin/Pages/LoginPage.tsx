@@ -21,10 +21,21 @@ const LoginPage: Component = () => {
   const [GetUsername, SetUsername] = createSignal("")
   const [GetPassword, SetPassword] = createSignal("")
   
+  let LastRequestTime =0;  
+  
   const navigate = useNavigate();
   
 
   function Login() {
+    const now = Date.now();
+
+    if (now - LastRequestTime < 10) 
+    {
+      console.warn("Rate limit exceeded");
+      return;
+    }
+    LastRequestTime = now;
+
     fetch(`https://api.localhost/Login?username=${GetUsername()}&password=${GetPassword()}`,
     {method: "POST"} ).then((response)=>{
         console.log(response.status)

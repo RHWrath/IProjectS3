@@ -9,13 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7f103854-a404-4208-999e-bbc115f2cbca" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/LoginController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/LoginController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/MenuCardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/Controllers/MenuCardController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/ViewModels/CatViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/ViewModels/CatViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/ViewModels/MenuCardViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/ViewModels/MenuCardViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cypress/cypress/e2e/testHomePageAdmin.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cypress/cypress/e2e/testHomePageAdmin.cy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cypress/cypress/e2e/testMenuKlantPage.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cypress/cypress/e2e/testMenuKlantPage.cy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/CreateCatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/CreateCatPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/LoginPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,21 +44,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Presentation: http.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Dev",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Presentation: http.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Dev&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Presentation: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Presentation-Kattencafe/Presentation.csproj" />
@@ -103,6 +98,7 @@
       <workItem from="1735651541086" duration="626000" />
       <workItem from="1736327453166" duration="339000" />
       <workItem from="1736329577894" duration="3802000" />
+      <workItem from="1736426764456" duration="179000" />
     </task>
     <servers />
   </component>

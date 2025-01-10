@@ -25,6 +25,7 @@ const CreateCatPage: Component = () => {
     if (now - LastRequestTime < 1000) 
     {
       console.warn("Rate limit exceeded");
+      showToast({title: "Error", description: "beetje rustig aan je hebt al de request aangemaakt"})
       return;
     }
     LastRequestTime = now;
