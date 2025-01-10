@@ -58,15 +58,15 @@ const LoginPage: Component = () => {
       <div class="flex justify-center">        
             <TextField>
               <TextFieldLabel for="CatName">Username:</TextFieldLabel>
-              <TextFieldInput onInput={e => SetUsername(e.currentTarget.value)} value={GetUsername()} type="text" id="InputCatName" placeholder="Username"/>
+              <TextFieldInput onInput={e => SetUsername(e.currentTarget.value)} value={GetUsername()} type="text" id="InputCatName" placeholder="Username" class="UsernameInput"/>
 
               <TextFieldLabel for="CatDescription">Password:</TextFieldLabel>
-              <TextFieldInput  onInput={e => SetPassword(e.currentTarget.value)} value={GetPassword()} type="password" id="InputCatDescription" placeholder="Password" />
+              <TextFieldInput  onInput={e => SetPassword(e.currentTarget.value)} value={GetPassword()} type="password" id="InputCatDescription" placeholder="Password" class="PasswordInput" />
             </TextField>
       </div>
       <div class="flex justify-center">
-        <Button class="send-button" onclick={() => Login()}>Login</Button>
-        <Toaster/>
+        <Button class="send-button LoginSubmit" onclick={() => Login()}>Login</Button>
+        <Toaster class="LoginToaster"/>
       </div>
     </div>
   );

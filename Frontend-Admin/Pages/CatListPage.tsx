@@ -59,7 +59,7 @@ const CatListPage: Component = () => {
       <NavigationMenu>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger as="a" href="/CreateCatPage">
-                    <Button>Nieuwe Kat toevoegen</Button>
+                    <Button class="NieuwKatButton">Nieuwe Kat toevoegen</Button>
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
        </NavigationMenu>
@@ -83,13 +83,13 @@ const CatListPage: Component = () => {
                 <div class="">
                       <Button onclick={() => UpdateCat(item.catID)}>Aanpassen</Button>
                       <Dialog>
-                        <DialogTrigger><Button>Delete</Button></DialogTrigger>
+                        <DialogTrigger><Button class="DeleteCat">Delete</Button></DialogTrigger>
                         <DialogContent>
                           <DialogHeader>
                             <DialogTitle>Weet je zeker dat je deze wilt verwijderen?</DialogTitle>
                           </DialogHeader>
                           <DialogFooter>
-                            <Button onclick={() => DeleteCat(item.catID)}>Confirm</Button>
+                            <Button onclick={() => DeleteCat(item.catID)} class="DeleteConfirm">Confirm</Button>
                           </DialogFooter>
                         </DialogContent>
                       </Dialog>                    

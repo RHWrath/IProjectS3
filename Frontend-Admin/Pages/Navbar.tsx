@@ -44,7 +44,7 @@ const Navbar: Component = () => {
         
         <NavigationMenuItem>
           <NavigationMenuTrigger as="a" href="/CatListPage">
-          <Button variant="ghost">De Katten</Button>
+          <Button variant="ghost" class="KatButton">De Katten</Button>
           </NavigationMenuTrigger>
         </NavigationMenuItem>
 

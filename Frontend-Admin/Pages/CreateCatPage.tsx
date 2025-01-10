@@ -54,14 +54,14 @@ const CreateCatPage: Component = () => {
       <div class="flex justify-center">
               <TextField>
                 <TextFieldLabel for="CatName">Kat naam:</TextFieldLabel>
-                <TextFieldInput onInput={e => setCatName(e.currentTarget.value)} value={GetCatName()} type="text" id="InputCatName" placeholder="Kat Naam" />
+                <TextFieldInput onInput={e => setCatName(e.currentTarget.value)} value={GetCatName()} type="text" id="InputCatName" placeholder="Kat Naam" class="CatnameInput"/>
 
                 <TextFieldLabel for="CatDescription">Kat omschrijving:</TextFieldLabel>
-                <TextFieldInput  onInput={e => setCatDiscription(e.currentTarget.value)} value={GetCatDiscription()} type="text" id="InputCatDescription" placeholder="Kat omschrijving:" />
+                <TextFieldInput  onInput={e => setCatDiscription(e.currentTarget.value)} value={GetCatDiscription()} type="text" id="InputCatDescription" placeholder="Kat omschrijving:" class="CatdescriptionInput" />
               </TextField>
       </div>
       <div class="flex justify-center">
-        <Button class="send-button" onclick={() => createCat()}>toevoegen</Button>
+        <Button class="send-button KatCreateButton" onclick={() => createCat()}>toevoegen</Button>
       </div>
       <Toaster/>
     </div>

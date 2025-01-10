@@ -40,14 +40,15 @@ services:
     depends_on:
       - database
     environment:
+      ASPNETCORE_ENVIRONMENT: Production
       ConnectionString: |
-        Server=database;
-        Database=Katcafe;
-        User Id=sa;
-        Password=TeLangWachtwoord#1;
-        Trusted_Connection=False;
-        TrustServerCertificate=True;
-        MultipleActiveResultSets=true;
+          Server=database;
+          Database=Katcafe;
+          User Id=sa;
+          Password=TeLangWachtwoord#1;
+          Trusted_Connection=False;
+          TrustServerCertificate=True;
+          MultipleActiveResultSets=true;
   database:
     image: mcr.microsoft.com/azure-sql-edge:latest
     networks:
@@ -59,7 +60,3 @@ services:
       MSSQL_SA_PASSWORD: "TeLangWachtwoord#1"
       MSSQL_PID: Developer
       MSSQL_TELEMETRY_ENABLED: "FALSE"
-  services:
-    webapp:
-      environment:
-       - ASPNETCORE_ENVIRONMENT=Production
