@@ -1,21 +1,38 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Logic.Models;
+using Microsoft.Extensions.Configuration;
 
 namespace DAL
 {
     public class DatabaseContext : DbContext
     {
+        private readonly IConfiguration _configuration;
+
+        public DatabaseContext(DbContextOptions<DatabaseContext> options, IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public DbSet<CatModel> CatLists { get; set; }
         public DbSet<MenuCardModel> MenuCards { get; set; }
-
-        private const string connection = $"Server=mssqlstud.fhict.local;Database=dbi514798_ips3;user id=dbi514798_ips3;password=SWW#1;TrustServerCertificate=True;";
-
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-        {
-            var conn = Environment.GetEnvironmentVariable("ConnectionString");
-            if (conn == null) conn = connection;
-            options.UseSqlServer(conn);
+        public DbSet<UserAcountModel> UserAcounts { get; set; }
+         protected override void OnConfiguring(DbContextOptionsBuilder options)
+         {
+             string environment = Environment.GetEnvironmentVariable("DatabaseConnection");
+             string connectionString = "empty";
             
+             //Console.WriteLine($"environment:" + environment);
+             
+             if (environment == "Production")
+             {
+                 connectionString = _configuration.GetConnectionString("ProductionDB");
+             }
+             else
+             {
+                 //Console.WriteLine("Using DEV");
+                 connectionString = _configuration.GetConnectionString("DevelopmentDB");
+             }
+             
+             options.UseSqlServer(connectionString);
         }
     }
 }

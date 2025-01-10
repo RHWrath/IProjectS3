@@ -30,6 +30,11 @@ namespace Backend_Test
         
         }
 
+        public CatModel GetCatByID(int catID)
+        {
+            throw new NotImplementedException();
+        }
+
         public void AddNewCat(string CatName, string CatDescription, string CatIMG)
         {
             throw new NotImplementedException();

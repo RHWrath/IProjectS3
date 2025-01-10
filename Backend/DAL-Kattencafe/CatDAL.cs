@@ -26,9 +26,13 @@ namespace DAL
 
                 CatList.Add(CatModel);
             }
-            return CatList;      
-        
+            return CatList;
         }
+
+        public CatModel GetCatByID(int ID)
+        {
+            return _dbContext.CatLists.FirstOrDefault(x => x.ID == ID);
+        } 
 
         public void AddNewCat(string CatName, string CatDescription, string? CatIMG)
         {
@@ -46,7 +50,6 @@ namespace DAL
                 CatModel catModel = _dbContext.CatLists.Where(CL => CL.ID == CatID).FirstOrDefault();
                 catModel.Name = CatName;
                 catModel.Description = CatDescription;
-                catModel.IMG = CatIMG;
                 _dbContext.SaveChanges();
             }
         }

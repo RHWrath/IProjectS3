@@ -1,4 +1,5 @@
-﻿namespace Main.ViewModels
+﻿// ReSharper disable UnusedAutoPropertyAccessor.Global
+namespace Main.ViewModels
 {
     public class CatViewModel
     {

@@ -1,5 +1,7 @@
-import type { Component } from 'solid-js';
-
+import {createEffect,  type Component, For } from 'solid-js';
+import "../css/CategoryCardCss.css";
+import { useNavigate } from "@solidjs/router";
+import { Button} from "~/components/ui/button"
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -7,26 +9,53 @@ import {
 } from "~/components/ui/navigation-menu"
 
 const Navbar: Component = () => {
+  
+      const navigate = useNavigate();
+      const Loggedin = Boolean(sessionStorage.getItem("LoggedIn"));
+
+      function LoginValidation() 
+      {  if (Loggedin != true) {   navigate("/");   }    }
+
+      function Logout() 
+      {
+        sessionStorage.clear
+        localStorage.clear
+        navigate("/")
+      }
+  
+      createEffect(() => {
+        LoginValidation();
+      })
   return (
-      <NavigationMenu>
+          
+    <div>
+        <NavigationMenu>
         <NavigationMenuItem>
           <NavigationMenuTrigger as="a" href="/HomePage">
-            Home
+          <Button variant="ghost">Home</Button>
           </NavigationMenuTrigger>
         </NavigationMenuItem>  
         
         <NavigationMenuItem>
           <NavigationMenuTrigger as="a" href="/MenuPage">
-            Menu
+          <Button variant="ghost">Het Menu</Button>
           </NavigationMenuTrigger>
         </NavigationMenuItem>
         
         <NavigationMenuItem>
           <NavigationMenuTrigger as="a" href="/CatListPage">
-            De Katten
+          <Button variant="ghost">De Katten</Button>
+          </NavigationMenuTrigger>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger as="a" href="/">
+            <Button onclick={() => Logout()} variant="ghost">Log out</Button>
           </NavigationMenuTrigger>
         </NavigationMenuItem>
       </NavigationMenu>
+    </div>
+    
     
   );
 };

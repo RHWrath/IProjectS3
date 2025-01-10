@@ -1,8 +1,10 @@
-﻿using Main.ViewModels;
+﻿using System.Text.RegularExpressions;
+using Main.ViewModels;
 using DAL;
 using Logic.Models;
 using Logic.Interfaces;
 using Logic;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace Main.Controllers
 {
@@ -10,6 +12,7 @@ namespace Main.Controllers
     {
         public static RouteGroupBuilder SetupCats(this RouteGroupBuilder group)
         {
+            
             group.MapGet("/", (DatabaseContext db) =>
             {
                 ICatDAL catDAL = new CatDAL(db);
@@ -34,9 +37,41 @@ namespace Main.Controllers
             .WithOpenApi()
             .WithDescription("Gets Information of all the Cats");
 
-            group.MapPost("/", 
-                (DatabaseContext db, string CatName, String CatDescription, string? CatIMG) => 
+            group.MapGet("/{CatID}", (DatabaseContext db, int CatID) =>
             {
+                ICatDAL catDAL = new CatDAL(db);
+                CatLogic catlogic = new CatLogic(catDAL);
+                CatModel catModel = new ();
+                CatViewModel catViewModel = new();
+                List<CatViewModel> Catlist = new ();
+                
+                catModel = catlogic.GetCatByID(CatID);
+                
+                catViewModel.CatID = catModel.ID;
+                catViewModel.CatName = catModel.Name;
+                catViewModel.CatDescription = catModel.Description;
+                catViewModel.CatIMG = catModel.IMG;
+                
+                Catlist.Add(catViewModel);
+                
+                return Catlist;
+            })
+            .WithName("Get Cat by ID")
+            .WithOpenApi()
+            .WithDescription("Gets Information of a cat by ID");
+            
+            group.MapPost("/", 
+                (DatabaseContext db, string CatName, String CatDescription, string? CatIMG) =>
+                {
+                    Regex regex = new Regex("^[A-Za-z0-9 .]+$");
+                    if (string.IsNullOrWhiteSpace(CatName) || string.IsNullOrWhiteSpace(CatDescription))
+                    {
+                        return Results.BadRequest("Naam & Description is Vereist");
+                    }
+                    if (!regex.IsMatch(CatName)) { return Results.BadRequest("Naam is fout");}
+                    
+                    if (!regex.IsMatch(CatDescription)) { return Results.BadRequest("Description is fout");}
+                    
                 ICatDAL catDAL = new CatDAL(db);
                 CatLogic catlogic = new CatLogic(catDAL);
                 catlogic.AddCat(CatName, CatDescription, CatIMG);
@@ -49,6 +84,15 @@ namespace Main.Controllers
             group.MapPut("/{CatID}",
                 (DatabaseContext db, string CatName, String CatDescription, string? CatIMG, int CatID) =>
                     {
+                        Regex regex = new Regex("^[A-Za-z0-9 .]+$");
+                        if (string.IsNullOrWhiteSpace(CatName) || string.IsNullOrWhiteSpace(CatDescription))
+                        {
+                            return Results.BadRequest("Naam & Description is Vereist");
+                        }
+                        if (!regex.IsMatch(CatName)) { return Results.BadRequest("Naam is fout");}
+                    
+                        if (!regex.IsMatch(CatDescription)) { return Results.BadRequest("Description is fout");}
+                        
                         ICatDAL catDAL = new CatDAL(db);
                         CatLogic catlogic = new CatLogic(catDAL);
                         catlogic.UpdateCat(CatName, CatDescription, CatIMG, CatID);

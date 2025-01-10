@@ -10,7 +10,8 @@ namespace Logic
         {
             this.MenuCardDAL = MenuDAL;
         }
-
+        public MenuCardModel GetMenuByID(int id)
+        { return MenuCardDAL.GetMenuByID(id); }
         public List<MenuCardModel> GetMenuCards() { return MenuCardDAL.GetMenuCards(); }
         
         public void AddMenuItem(string menuItemName, string MenuItemDescription, double MenuItemPrice)

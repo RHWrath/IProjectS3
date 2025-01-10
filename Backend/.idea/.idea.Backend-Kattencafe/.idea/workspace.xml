@@ -8,7 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f103854-a404-4208-999e-bbc115f2cbca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/DAL-Kattencafe/DatabaseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL-Kattencafe/DatabaseContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/CreateCatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/CreateCatPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/LoginPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +23,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2d3fad7b7f175e73a9ee6623bad266309c5cb8780c91159bdb98d469c8854/RateLimiterApplicationBuilderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3bd4df5aff92cabbc4d630be64227073db1b8539b3a1e47786b4b189d7cdb7/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b8c1c57742337e59591581af3eb2c647e9ed52d2951655fd74b1facf3ff520/ConfigurationExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f8c7eb7ea1edec4e19324d5ffa81a4a6eb62d142b0aae0598f9aa7773ec68f6b/RequestDelegateFactory.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -29,16 +37,19 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2pMKuIls37yMXS61JgAWsnuBO0T" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.Presentation: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.Presentation: http.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Dev&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -78,6 +89,16 @@
       <workItem from="1733214373924" duration="4323000" />
       <workItem from="1733299234796" duration="7411000" />
       <workItem from="1733910555934" duration="1159000" />
+      <workItem from="1734522816222" duration="14056000" />
+      <workItem from="1734682382035" duration="7421000" />
+      <workItem from="1734883409865" duration="674000" />
+      <workItem from="1734956236208" duration="10948000" />
+      <workItem from="1735296948223" duration="396000" />
+      <workItem from="1735562533094" duration="1393000" />
+      <workItem from="1735651541086" duration="626000" />
+      <workItem from="1736327453166" duration="339000" />
+      <workItem from="1736329577894" duration="3802000" />
+      <workItem from="1736426764456" duration="179000" />
     </task>
     <servers />
   </component>
@@ -88,25 +109,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Presentation-Kattencafe/Controllers/CatController.cs</url>
-          <line>13</line>
-          <properties documentPath="C:\Users\Rik Heerholtz\Desktop\Fonty's\S3\Individueel project\IProjectS3\Backend\Presentation-Kattencafe\Controllers\CatController.cs" containingFunctionPresentation="Lambda expression inside Method 'SetupCats'">
-            <startOffsets>
-              <option value="321" />
-            </startOffsets>
-            <endOffsets>
-              <option value="322" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

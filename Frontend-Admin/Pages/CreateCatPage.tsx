@@ -5,17 +5,43 @@ import "../css/CategoryCardCss.css";
 import { useNavigate } from "@solidjs/router";
 import { TextField, TextFieldInput, TextFieldLabel } from "~/components/ui/text-field"
 import { showToast, Toaster } from "~/components/ui/toast"
+import { Button, buttonVariants } from "~/components/ui/button"
 //#endregion
 
 
 const CreateCatPage: Component = () => {
 
   const [GetCatName, setCatName] = createSignal("")
-  const [GetCatDiscription, setCatDiscription] = createSignal("")
+  const [GetCatDiscription, setCatDiscription] = createSignal("")  
+  let LastRequestTime =0;  
   
   const navigate = useNavigate();
 
   function createCat() {
+    const now = Date.now();
+    const CatName = GetCatName();
+    const CatDescription = GetCatDiscription();
+
+    if (now - LastRequestTime < 1000) 
+    {
+      console.warn("Rate limit exceeded");
+      showToast({title: "Error", description: "beetje rustig aan je hebt al de request aangemaakt"})
+      return;
+    }
+    LastRequestTime = now;
+
+    if (! /^[A-Za-z0-9 .]+$/.test(CatName)) 
+      {
+        showToast({title: "Error", description: "kat naam ongeldig"})
+        return
+      }
+  
+      if (! /^[A-Za-z0-9 .]+$/.test(CatDescription)) 
+      {
+        showToast({title: "Error", description: "kat description ongeldig"})
+        return
+      }
+
     fetch(`https://api.localhost/Cats?CatName=${GetCatName()}&CatDescription=${GetCatDiscription()}`, {method: "POST"});
     showToast({title: "kat gemaakt", description: "kat is aangemaakt je wordt terug gestuurd"})
     setTimeout(() => navigate("/CatListPage"), 2000)
@@ -35,7 +61,7 @@ const CreateCatPage: Component = () => {
               </TextField>
       </div>
       <div class="flex justify-center">
-        <button class="send-button" onclick={() => createCat()}>toevoegen</button>
+        <Button class="send-button" onclick={() => createCat()}>toevoegen</Button>
       </div>
       <Toaster/>
     </div>

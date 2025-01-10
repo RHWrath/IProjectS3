@@ -17,3 +17,8 @@ Run `pnpm start` to start the app in development mode.
 ## Installing Components
 
 Run `pnpm npx solidui-cli@0.6.8 add dialog`
+
+## running program
+
+before running said the program through bash start.sh always run export ASPNETCORE_ENVIRONMENT=Development
+and if you wish to change to main run ASPNETCORE_ENVIRONMENT=Production
