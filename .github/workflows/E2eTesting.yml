@@ -30,7 +30,6 @@ jobs:
 
             - name: Run Cypress tests      
               uses: cypress-io/github-action@v6
-              with:                    
+              with:
                 working-directory: ./cypress
-                build: npm run build
-                start: npm start
+                run: pnpm npx cypress run
