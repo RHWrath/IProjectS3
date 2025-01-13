@@ -1,12 +1,11 @@
 //#region Imports
-import {createSignal,createEffect, createResource, type Component, For } from 'solid-js';
+import {createSignal, createResource, type Component, For } from 'solid-js';
 import Navbar from './Navbar';
 import "../css/CategoryCardCss.css";
 import { useNavigate } from "@solidjs/router";
 import { TextField, TextFieldInput, TextFieldLabel } from "~/components/ui/text-field"
 import { showToast, Toaster } from "~/components/ui/toast"
-import { Item } from '@kobalte/core/navigation-menu';
-import { Button, buttonVariants } from "~/components/ui/button"
+import { Button } from "~/components/ui/button"
 //#endregion
 
 interface MenuItem{

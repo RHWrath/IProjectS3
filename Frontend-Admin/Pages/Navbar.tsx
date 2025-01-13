@@ -1,4 +1,4 @@
-import {createEffect,  type Component, For } from 'solid-js';
+import {createEffect,  type Component } from 'solid-js';
 import "../css/CategoryCardCss.css";
 import { useNavigate } from "@solidjs/router";
 import { Button} from "~/components/ui/button"
@@ -18,8 +18,8 @@ const Navbar: Component = () => {
 
       function Logout() 
       {
-        sessionStorage.clear
-        localStorage.clear
+        sessionStorage.clear()
+        localStorage.clear()
         navigate("/")
       }
   

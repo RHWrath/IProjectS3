@@ -24,7 +24,7 @@ import {
   DialogTrigger
 } from "~/components/ui/dialog"
 import { useNavigate } from "@solidjs/router";
-import { Button, buttonVariants } from "~/components/ui/button"
+import { Button } from "~/components/ui/button"
 //#endregion
 
 
