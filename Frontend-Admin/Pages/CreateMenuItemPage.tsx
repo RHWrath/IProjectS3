@@ -41,7 +41,7 @@ const CreateMenuItemPage: Component = () => {
        }
 
     fetch(`https://api.localhost/MenuCard?MenuItemName=${GetItemName()}&MenuItemDescription=${GetItemDiscription()}&Price=${GetItemPrice()}`, {method: "POST"});
-    setTimeout(() => navigate("/CatListPage"), 2000)
+    setTimeout(() => navigate("/MenuPage"), 400)
   }
 
 
@@ -52,13 +52,13 @@ const CreateMenuItemPage: Component = () => {
           <div class="flex justify-left">
                   <TextField>
                     <TextFieldLabel for="menuItemName">Menu item naam:</TextFieldLabel>
-                    <TextFieldInput onInput={e => setItemName(e.currentTarget.value)} value={GetItemName()} type="text" id="inputMenuItemName" placeholder="" />
+                    <TextFieldInput onInput={e => setItemName(e.currentTarget.value)} value={GetItemName()} type="text" id="inputMenuItemName" placeholder="" class="MenuitemName"/>
 
                     <TextFieldLabel for="menuItemDescription">Menu iten omschrijving:</TextFieldLabel>
-                    <TextFieldInput  onInput={e => setItemDiscription(e.currentTarget.value)} value={GetItemDiscription()} type="text" id="InputMenuItemDescription" placeholder="" />
+                    <TextFieldInput  onInput={e => setItemDiscription(e.currentTarget.value)} value={GetItemDiscription()} type="text" id="InputMenuItemDescription" placeholder="" class="MenuItemDesciption"/>
 
                     <TextFieldLabel for="menuItemPrice">Menu Item prijs:</TextFieldLabel>
-                    <TextFieldInput  onInput={e => setItemPrice(e.currentTarget.value)} value={GetItemPrice()} type="text" id="InputMenuItemPrice" placeholder="" />
+                    <TextFieldInput  onInput={e => setItemPrice(e.currentTarget.value)} value={GetItemPrice()} type="text" id="InputMenuItemPrice" placeholder="" class="MenuItemPrice"/>
                   </TextField>
           </div>
           <div>

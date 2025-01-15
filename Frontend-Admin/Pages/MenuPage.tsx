@@ -40,8 +40,8 @@ const MenuPage: Component = () => {
   
   
   function DeleteMenuItem(Id : number) {
-    fetch(`https://api.localhost/MenuCard?MenuCardID=${Id}`, {method: "DELETE"});
-    setTimeout(() => location.reload(), 3000);
+    fetch(`https://api.localhost/MenuCard/${Id}`, {method: "DELETE"});
+    setTimeout(() => location.reload(), 400);
     
   }
 
@@ -59,14 +59,14 @@ const MenuPage: Component = () => {
       <NavigationMenu>
         <NavigationMenuItem>
           <NavigationMenuTrigger as="a" href="/CreateMenuItemPage">
-            <Button>Nieuwe Menu item toevoegen</Button>
+            <Button class="NieuwMenuItem">Nieuwe Menu item toevoegen</Button>
           </NavigationMenuTrigger>
         </NavigationMenuItem>
       </NavigationMenu>
       <For each ={Menu()}>
         {item => 
           <div>
-            <Card>
+            <Card class="MenuCard">
               <CardHeader>
                 <CardTitle> {item.name}  </CardTitle>
                 <CardDescription> {item.description} </CardDescription>
@@ -84,13 +84,13 @@ const MenuPage: Component = () => {
               <CardFooter>
                 <div class="">
                       <Dialog>
-                        <DialogTrigger><Button>Delete</Button></DialogTrigger>
+                        <DialogTrigger><Button class="DeleteItemButton">Delete</Button></DialogTrigger>
                         <DialogContent>
                           <DialogHeader>
                             <DialogTitle>Weet je zeker dat je deze wilt verwijderen?</DialogTitle>
                           </DialogHeader>
                           <DialogFooter>
-                            <Button onclick={() => DeleteMenuItem(item.id)}>Delete</Button>
+                            <Button onclick={() => DeleteMenuItem(item.id)} class="DeleteConfirm">Delete</Button>
                           </DialogFooter>
                         </DialogContent>
                       </Dialog>
