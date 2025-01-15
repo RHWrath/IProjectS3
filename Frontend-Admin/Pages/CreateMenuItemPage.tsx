@@ -2,7 +2,7 @@ import {createSignal, type Component } from 'solid-js'
 import Navbar from './Navbar';
 import { TextField, TextFieldInput, TextFieldLabel } from "~/components/ui/text-field"
 import { useNavigate } from "@solidjs/router"
-import { Button, buttonVariants } from "~/components/ui/button"
+import { Button } from "~/components/ui/button"
 import { showToast, Toaster } from "~/components/ui/toast"
 
 

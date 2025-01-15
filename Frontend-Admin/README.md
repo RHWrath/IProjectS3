@@ -22,3 +22,6 @@ Run `pnpm npx solidui-cli@0.6.8 add dialog`
 
 before running said the program through bash start.sh always run export ASPNETCORE_ENVIRONMENT=Development
 and if you wish to change to main run ASPNETCORE_ENVIRONMENT=Production
+
+## Eslint
+run `pnpm npx eslint` in frontend folders for CQA

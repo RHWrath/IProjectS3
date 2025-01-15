@@ -13,7 +13,7 @@ import {
   NavigationMenuItem,
   NavigationMenuTrigger
 } from "~/components/ui/navigation-menu"
-import { Button, buttonVariants } from "~/components/ui/button"
+import { Button } from "~/components/ui/button"
 import { useNavigate } from "@solidjs/router";
 import {
   Dialog,
