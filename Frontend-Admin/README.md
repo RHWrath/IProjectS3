@@ -24,3 +24,4 @@ before running said the program through bash start.sh always run export ASPNETCO
 and if you wish to change to main run ASPNETCORE_ENVIRONMENT=Production
 
 ## Eslint
+run `pnpm npx eslint` in frontend folders for CQA
