@@ -35,12 +35,12 @@ interface MenuItem{
 const MenuPage: Component = () => {
 
   const navigate = useNavigate();  
-  const [Menu] = createResource<MenuItem[] | undefined>(() => fetch("https://api.localhost/MenuCard").then(body=>body.json()))
+  const [Menu] = createResource<MenuItem[] | undefined>(() => fetch("http://api.localhost/MenuCard").then(body=>body.json()))
       createEffect(() => console.log(Menu()))
   
   
   function DeleteMenuItem(Id : number) {
-    fetch(`https://api.localhost/MenuCard/${Id}`, {method: "DELETE"});
+    fetch(`http://api.localhost/MenuCard/${Id}`, {method: "DELETE"});
     setTimeout(() => location.reload(), 400);
     
   }

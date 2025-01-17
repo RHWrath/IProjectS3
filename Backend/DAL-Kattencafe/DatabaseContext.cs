@@ -17,21 +17,22 @@ namespace DAL
         public DbSet<UserAcountModel> UserAcounts { get; set; }
          protected override void OnConfiguring(DbContextOptionsBuilder options)
          {
-             string environment = Environment.GetEnvironmentVariable("DatabaseConnection");
-             string connectionString = "empty";
+             string? environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+             string? connectionString = Environment.GetEnvironmentVariable("ConnectionString");
             
              //Console.WriteLine($"environment:" + environment);
-             
-             if (environment == "Production")
+             if (connectionString == null)
              {
-                 connectionString = _configuration.GetConnectionString("ProductionDB");
+                 if (environment == "Production")
+                 {
+                     connectionString = _configuration.GetConnectionString("ProductionDB");
+                 }
+                 else
+                 {
+                     //Console.WriteLine("Using DEV");
+                     connectionString = _configuration.GetConnectionString("DevelopmentDB");
+                 }
              }
-             else
-             {
-                 //Console.WriteLine("Using DEV");
-                 connectionString = _configuration.GetConnectionString("DevelopmentDB");
-             }
-             
              options.UseSqlServer(connectionString);
         }
     }

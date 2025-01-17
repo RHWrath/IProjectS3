@@ -38,12 +38,12 @@ interface Cat{
 const CatListPage: Component = () => {
 
   const navigate = useNavigate();  
-  const [cats] = createResource<Cat[] | undefined>(() => fetch("https://api.localhost/Cats").then(body=>body.json()))
+  const [cats] = createResource<Cat[] | undefined>(() => fetch("http://api.localhost/Cats").then(body=>body.json()))
   createEffect(() => console.log(cats()))  
 
 
   function DeleteCat(Id : number) {
-    fetch(`https://api.localhost/Cats/${Id}`, {method: "DELETE"});
+    fetch(`http://api.localhost/Cats/${Id}`, {method: "DELETE"});
     setTimeout(() => location.reload(), 400);    
   }
 

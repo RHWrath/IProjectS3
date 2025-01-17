@@ -42,7 +42,7 @@ const CreateCatPage: Component = () => {
         return
       }
 
-    fetch(`https://api.localhost/Cats?CatName=${GetCatName()}&CatDescription=${GetCatDiscription()}`, {method: "POST"});
+    fetch(`http://api.localhost/Cats?CatName=${GetCatName()}&CatDescription=${GetCatDiscription()}`, {method: "POST"});
     showToast({title: "kat gemaakt", description: "kat is aangemaakt je wordt terug gestuurd"})
     setTimeout(() => navigate("/CatListPage"), 2000)
   }

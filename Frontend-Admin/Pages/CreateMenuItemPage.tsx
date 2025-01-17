@@ -40,7 +40,7 @@ const CreateMenuItemPage: Component = () => {
         return
        }
 
-    fetch(`https://api.localhost/MenuCard?MenuItemName=${GetItemName()}&MenuItemDescription=${GetItemDiscription()}&Price=${GetItemPrice()}`, {method: "POST"});
+    fetch(`http://api.localhost/MenuCard?MenuItemName=${GetItemName()}&MenuItemDescription=${GetItemDiscription()}&Price=${GetItemPrice()}`, {method: "POST"});
     setTimeout(() => navigate("/MenuPage"), 400)
   }
 

@@ -9,15 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7f103854-a404-4208-999e-bbc115f2cbca" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend-Kattencafe.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Backend-Kattencafe.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend-Test/LogicTest/CatUnitTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend-Test/LogicTest/CatUnitTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend-Test/MockCatDAL.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend-Test/MockCatDAL.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/CatListPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/CatListPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/CreateMenuItemPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/CreateMenuItemPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/MenuPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/MenuPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/Pages/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/Pages/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cypress/cypress/e2e/CrudAdmin.cy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cypress/cypress/e2e/testHomePageAdmin.cy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +59,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Presentation: http">
+  <component name="RunManager">
     <configuration name="Presentation: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Presentation-Kattencafe/Presentation.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -113,6 +105,7 @@
       <workItem from="1736942925348" duration="3331000" />
       <workItem from="1736950216560" duration="3040000" />
       <workItem from="1736953297236" duration="87000" />
+      <workItem from="1737104416611" duration="731000" />
     </task>
     <servers />
   </component>

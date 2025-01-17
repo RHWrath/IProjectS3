@@ -8,4 +8,4 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0-azurelinux3.0-distroless-extra
 WORKDIR /app
 COPY --from=build /app/out .
 
-ENTRYPOINT ["dotnet", "Main.dll"]
+ENTRYPOINT ["dotnet", "Presentation.dll"]

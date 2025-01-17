@@ -25,3 +25,6 @@ and if you wish to change to main run ASPNETCORE_ENVIRONMENT=Production
 
 ## Eslint
 run `pnpm npx eslint` in frontend folders for CQA
+
+## Cypress
+run `pnpm npx cypress run` in cypress for E2E
