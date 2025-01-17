@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 describe('CrudCAT', () => {
   it('Create Kat', () => {
-    cy.visit('https://admin.localhost/')
+    cy.visit('http://admin.localhost/')
     cy.get(".UsernameInput").type("Admin")
     cy.get(".UsernameInput").should("have.value", "Admin")
     cy.get(".PasswordInput").type("TL1")
@@ -18,7 +18,7 @@ describe('CrudCAT', () => {
   })
 
   it('Delete Kat', () => {
-    cy.visit('https://admin.localhost/')
+    cy.visit('http://admin.localhost/')
     cy.get(".UsernameInput").type("Admin")
     cy.get(".UsernameInput").should("have.value", "Admin")
     cy.get(".PasswordInput").type("TL1")

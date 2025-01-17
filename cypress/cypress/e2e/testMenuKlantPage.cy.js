@@ -1,5 +1,5 @@
 describe('Vist client page', () => {
   it('passes', () => {
-    cy.visit('https://localhost/MenuPage')
+    cy.visit('http://localhost/MenuPage')
   })
 })

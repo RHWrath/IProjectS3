@@ -8,8 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f103854-a404-4208-999e-bbc115f2cbca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend-Kattencafe/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation-Kattencafe/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation-Kattencafe/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Caddyfile" beforeDir="false" afterPath="$PROJECT_DIR$/../Caddyfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend-Admin/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend-Admin/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cypress/cypress/e2e/CrudAdminCat.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cypress/cypress/e2e/CrudAdminCat.cy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cypress/cypress/e2e/CrudAdminMenu.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cypress/cypress/e2e/CrudAdminMenu.cy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cypress/cypress/e2e/testLoginAdmin.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cypress/cypress/e2e/testLoginAdmin.cy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cypress/cypress/e2e/testMenuKlantPage.cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cypress/cypress/e2e/testMenuKlantPage.cy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../start.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +111,7 @@
       <workItem from="1736950216560" duration="3040000" />
       <workItem from="1736953297236" duration="87000" />
       <workItem from="1737104416611" duration="731000" />
+      <workItem from="1737110148039" duration="2760000" />
     </task>
     <servers />
   </component>

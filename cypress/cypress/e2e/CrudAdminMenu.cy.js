@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 describe('CrudMenuItem', () => {
   it('Create MenuItem', () => {
-    cy.visit('https://admin.localhost/')
+    cy.visit('http://admin.localhost/')
     cy.get(".UsernameInput").type("Admin")
     cy.get(".UsernameInput").should("have.value", "Admin")
     cy.get(".PasswordInput").type("TL1")
@@ -20,7 +20,7 @@ describe('CrudMenuItem', () => {
   })
 
   it('Delete MenuItem', () => {
-    cy.visit('https://admin.localhost/')
+    cy.visit('http://admin.localhost/')
     cy.get(".UsernameInput").type("Admin")
     cy.get(".UsernameInput").should("have.value", "Admin")
     cy.get(".PasswordInput").type("TL1")
