@@ -38,7 +38,7 @@ const Navbar: Component = () => {
         
         <NavigationMenuItem>
           <NavigationMenuTrigger as="a" href="/MenuPage">
-          <Button variant="ghost">Het Menu</Button>
+          <Button variant="ghost" class="MenuButton">Het Menu</Button>
           </NavigationMenuTrigger>
         </NavigationMenuItem>
         

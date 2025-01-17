@@ -1,10 +1,17 @@
-api.localhost {
+{
+	admin off
+	debug
+	auto_https off
+}
+
+http://api.localhost {
 	reverse_proxy :5018
 }
 
-admin.localhost {
+http://admin.localhost {
 	reverse_proxy :3001
 }
-localhost {
+
+http://localhost {
 	reverse_proxy :3000
 }

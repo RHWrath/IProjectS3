@@ -38,12 +38,12 @@ interface Cat{
 const CatListPage: Component = () => {
 
   const navigate = useNavigate();  
-  const [cats] = createResource<Cat[] | undefined>(() => fetch("https://api.localhost/Cats").then(body=>body.json()))
+  const [cats] = createResource<Cat[] | undefined>(() => fetch("http://api.localhost/Cats").then(body=>body.json()))
   createEffect(() => console.log(cats()))  
 
 
   function DeleteCat(Id : number) {
-    fetch(`https://api.localhost/Cats/${Id}`, {method: "DELETE"});
+    fetch(`http://api.localhost/Cats/${Id}`, {method: "DELETE"});
     setTimeout(() => location.reload(), 400);    
   }
 
@@ -66,7 +66,7 @@ const CatListPage: Component = () => {
       <For each ={cats()}>
         {item => 
           <div>
-            <Card>
+            <Card class ="CatCard">
               <CardHeader>
                 <CardTitle> {item.catName}  </CardTitle>
                 <CardDescription> {item.catDescription} </CardDescription>
@@ -83,7 +83,7 @@ const CatListPage: Component = () => {
                 <div class="">
                       <Button onclick={() => UpdateCat(item.catID)}>Aanpassen</Button>
                       <Dialog>
-                        <DialogTrigger><Button class="DeleteCat">Delete</Button></DialogTrigger>
+                        <DialogTrigger><Button class="DeleteCatButton">Delete</Button></DialogTrigger>
                         <DialogContent>
                           <DialogHeader>
                             <DialogTitle>Weet je zeker dat je deze wilt verwijderen?</DialogTitle>

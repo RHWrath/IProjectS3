@@ -1,6 +1,7 @@
-describe('Crud', () => {
+/// <reference types="Cypress" />
+describe('CrudCAT', () => {
   it('Create Kat', () => {
-    cy.visit('https://admin.localhost/')
+    cy.visit('http://admin.localhost/')
     cy.get(".UsernameInput").type("Admin")
     cy.get(".UsernameInput").should("have.value", "Admin")
     cy.get(".PasswordInput").type("TL1")
@@ -17,7 +18,7 @@ describe('Crud', () => {
   })
 
   it('Delete Kat', () => {
-    cy.visit('https://admin.localhost/')
+    cy.visit('http://admin.localhost/')
     cy.get(".UsernameInput").type("Admin")
     cy.get(".UsernameInput").should("have.value", "Admin")
     cy.get(".PasswordInput").type("TL1")
@@ -25,7 +26,8 @@ describe('Crud', () => {
     cy.get(".LoginSubmit").click()
     cy.get(".LoginToaster").first().contains("Succes:")
     cy.get(".KatButton").click()
-    cy.get(".DeleteCat").last().click()
+    cy.get(".CatCard").contains("CypressKat").get(".DeleteCatButton").last().click()
     cy.get(".DeleteConfirm").click()
+    cy.get(".CatCard").contains("CypressKat").should("not.exist")
   })
 })

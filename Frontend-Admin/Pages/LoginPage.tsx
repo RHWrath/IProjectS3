@@ -28,7 +28,7 @@ const LoginPage: Component = () => {
     }
     LastRequestTime = now;
 
-    fetch(`https://api.localhost/Login?username=${GetUsername()}&password=${GetPassword()}`,
+    fetch(`http://api.localhost/Login?username=${GetUsername()}&password=${GetPassword()}`,
     {method: "POST"} ).then((response)=>{
         console.log(response.status)
         if (response.ok) 

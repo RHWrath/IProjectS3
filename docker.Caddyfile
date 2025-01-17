@@ -4,13 +4,14 @@
 	auto_https off
 }
 
-api.localhost {
-	reverse_proxy backend:5018
+http://api.localhost {
+	reverse_proxy backend:8080
 }
 
-admin.localhost {
-	reverse_proxy frontend-admin:3001
+http://admin.localhost {
+	reverse_proxy frontend-admin:3000
 }
-localhost {
+
+http://localhost {
 	reverse_proxy frontend-klant:3000
 }

@@ -26,7 +26,7 @@ const UpdateCatPage: Component = () => {
   const CatID = Number(localStorage.getItem("CatID"))
   let LastRequestTime =0;
   
-  const [cat] = createResource<Cat[] | undefined>(() => fetch(`https://api.localhost/Cats/${CatID}`).then(body=>body.json()))
+  const [cat] = createResource<Cat[] | undefined>(() => fetch(`http://api.localhost/Cats/${CatID}`).then(body=>body.json()))
 
   function updateCat() {
     console.log("kat naam",GetCatName())

@@ -1,6 +1,8 @@
 using Main.Controllers;
 using DAL;
+using Logic.Models;
 using Microsoft.AspNetCore.RateLimiting;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,7 +31,16 @@ builder.Services.AddRateLimiter(options =>
 
 builder.Services.AddDbContext<DatabaseContext>();
 
+
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
+    db.Database.Migrate();
+    if (db.UserAcounts.FirstOrDefault(u => u.UserName == "BaseAdmin") == null )
+        db.UserAcounts.Add(new UserAcountModel{UserName ="BaseAdmin", Password = "BaseAdmin"});
+    db.SaveChanges();
+}
 
 app.UseCors();
 

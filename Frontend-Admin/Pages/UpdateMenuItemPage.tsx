@@ -26,7 +26,7 @@ const UpdateMenuItemPage: Component = () => {
   const navigate = useNavigate();
   const MenuItemID = Number(localStorage.getItem("MenuItemID"))
   
-  const [Menu] = createResource<MenuItem[] | undefined>(() => fetch(`https://api.localhost/MenuCard/${MenuItemID}`).then(body=>body.json()))
+  const [Menu] = createResource<MenuItem[] | undefined>(() => fetch(`http://api.localhost/MenuCard/${MenuItemID}`).then(body=>body.json()))
 
   function UpdateMenuItem() {
     console.log("item naam",GetMenuName())
